@@ -1,0 +1,15 @@
+{
+  "candidates": 284,
+  "included": 278,
+  "categories": 19,
+  "httpVerified": 266,
+  "pending": 12,
+  "excluded": 6,
+  "duplicates": [
+    {
+      "removedId": "filmlink-5ed082b9",
+      "keptId": "filmlink",
+      "finalUrl": "https://www.filmlink.io"
+    }
+  ]
+}

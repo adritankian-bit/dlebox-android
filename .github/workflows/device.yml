@@ -29,12 +29,12 @@ jobs:
           script: |
             chmod +x gradlew
             ./gradlew connectedDebugAndroidTest --no-daemon
-            bash scripts/device_screenshots.sh
+            adb pull /sdcard/Download/dlebox-check visual-check
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: DleBox-device-check
           path: |
-            DleBox-Android35*.png
+            visual-check/
             app/build/reports/androidTests/
             app/build/outputs/androidTest-results/

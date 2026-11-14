@@ -19,22 +19,24 @@ private val android.content.Context.libraryStore by preferencesDataStore("librar
 class LibraryViewModel(app: Application) : AndroidViewModel(app) {
     private val store = app.libraryStore
     private val key = stringPreferencesKey("library_v1")
+    val error = MutableStateFlow<String?>(null)
     val saved = store.data.map { CatalogCodec.json.decodeFromString<SavedLibrary>(it[key] ?: "{}") }
         .catch { error.value = "No se pudieron leer los datos locales. Reinicia DleBox."; emit(SavedLibrary()) }
         .stateIn(viewModelScope, SharingStarted.Eagerly, SavedLibrary())
     val games = MutableStateFlow<List<Game>>(emptyList())
     val refreshing = MutableStateFlow(false)
-    val error = MutableStateFlow<String?>(null)
     val status = MutableStateFlow("Cargando catálogo…")
     private var currentVersion = 0
     private val cache = File(app.filesDir, "catalog.json")
     init { viewModelScope.launch {
         withContext(Dispatchers.IO) {
-            val bundled = CatalogCodec.decode(app.assets.open("games.json").bufferedReader().use { it.readText() })
-            val cached = runCatching { CatalogCodec.decode(cache.readText()) }.getOrNull()
-            val selected = if (cached != null && cached.version >= bundled.version) cached else bundled
-            games.value = selected.games; currentVersion = selected.version
-            status.value = "Catálogo local · ${selected.games.size} juegos"
+            val bundledRaw = runCatching { app.assets.open("games.json").bufferedReader().use { it.readText() } }.getOrNull()
+            val cachedRaw = runCatching { android.util.AtomicFile(cache).openRead().bufferedReader().use { it.readText() } }.getOrNull()
+            val selected = chooseCatalog(bundledRaw, cachedRaw)
+            if (selected != null) {
+                games.value = selected.games; currentVersion = selected.version
+                status.value = "Catálogo local · ${selected.games.size} juegos"
+            } else status.value = "No se pudo leer el catálogo. Prueba a actualizarlo."
         }
         refresh()
     } }
@@ -50,6 +52,7 @@ class LibraryViewModel(app: Application) : AndroidViewModel(app) {
     fun toggle(g: Game) = update { it.toggle(g) }
     fun opened(g: Game) = update { it.opened(g, System.currentTimeMillis()) }
     fun removeRecent(id: String) = update { it.removeRecent(id) }
+    fun clearRecent() = update { it.clearRecent() }
     fun theme(value: String) = update { it.copy(theme = value) }
     fun refresh() {
         if (refreshing.value) return
@@ -82,7 +85,7 @@ class LibraryViewModel(app: Application) : AndroidViewModel(app) {
                     currentVersion = catalog.version; games.value = catalog.games
                     status.value = "Actualizado · ${catalog.games.size} juegos · v${catalog.version}"
                 } finally { connection.disconnect() }
-            } }.onFailure { status.value = "Sin actualización · catálogo local disponible" }
+            } }.onFailure { status.value = if(games.value.isEmpty()) "No se pudo recuperar el catálogo. Vuelve a intentarlo." else "Sin actualización · catálogo local disponible" }
             refreshing.value = false
         }
     }

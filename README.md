@@ -1,82 +1,77 @@
-# DleBox
+# DleBox 2.0
 
-Biblioteca Android nativa para descubrir y abrir juegos diarios en sus páginas originales. Kotlin, Jetpack Compose y Material 3. Compatible con Android 8.0 (API 26) y posteriores.
+Biblioteca Android nativa de juegos diarios de navegador. El proyecto existente se amplía de **6 a 278 juegos reales, en 19 categorías**. Kotlin, Compose, Material 3, DataStore, Coil y Custom Tabs; Android 8.0 o posterior. Sin cuentas, publicidad propia, suscripciones ni analíticas.
 
-## Qué incluye
+## Instalar
 
-- Explorar, Favoritos y Recientes, búsqueda instantánea y categorías.
-- Cuadrícula virtualizada de dos columnas, temas claro, oscuro y del sistema.
-- Apertura mediante Custom Tabs o navegador; ficha secundaria y apertura externa explícita.
-- Favoritos e historial locales con DataStore; conserva fichas de juegos guardados aunque desaparezcan del catálogo remoto.
-- Catálogo incluido en la APK, caché local y actualización HTTPS en segundo plano al abrir la aplicación o desde Ajustes.
-- Coil para imágenes autorizadas; tarjetas tipográficas originales como alternativa sin conexión.
+Descarga **DleBox-v2.0.0.apk** en [GitHub Releases](https://github.com/adritankian-bit/dlebox-android/releases/tag/v2.0.0). Abre el APK en Android y permite la instalación desde el navegador cuando el sistema lo solicite. Los archivos “Source code” no son instaladores.
 
-Catálogo inicial: **6 juegos reales y 5 categorías**, con comprobación HTTP 200 el 14 de noviembre de 2026. No se ha importado masivamente Listdle. No se han reutilizado sus imágenes. Ver [investigación](docs/CATALOGO.md).
+**Compilación debug de prueba. Firma distinta de la v1.0.0 publicada:** no se ha conservado la clave efímera de aquella ejecución de Actions, y la clave local disponible tiene otro certificado. Android puede exigir desinstalar la versión anterior, borrando sus datos. No desinstales esperando que se conserven favoritos. El formato de datos y los seis IDs originales sí son compatibles para actualizaciones con la misma firma.
 
-## Descargar e instalar
+## Uso
 
-Abre [Releases](https://github.com/adritankian-bit/dlebox-android/releases) desde el móvil. En `v1.0.0`, descarga el asset **DleBox-v1.0.0.apk**. Los ZIP “Source code” no son la aplicación.
+- **Explorar:** buscador instantáneo por nombre, categoría y descripción; chips de categorías no vacías; contador real; orden por nombre, incorporación, últimos jugados o aleatorio. «Sorpréndeme» respeta búsqueda/categoría y excluye enlaces conocidos como rotos o inválidos.
+- **Tarjetas:** dos columnas compactas, arte protagonista, nombre una sola vez, categoría y favorito. El botón de información abre la ficha; tocar la tarjeta abre el juego original.
+- **Favoritos:** cuadrícula independiente de los filtros de Explorar, eliminación directa y estado vacío con acceso a Explorar.
+- **Recientes:** lista compacta con miniatura, categoría, fecha relativa y eliminación. Borrado completo con confirmación. Reabrir un juego actualiza su fecha, sin duplicarlo.
+- **Ajustes:** tema claro/oscuro/sistema, actualización manual, versión, atribuciones y repositorio.
 
-Abre el APK descargado y permite a tu navegador instalar aplicaciones cuando Android lo solicite. Confirma la instalación y abre DleBox. Los juegos requieren conexión.
+Las pestañas conservan el estado de búsqueda, categoría y desplazamiento de Explorar. Los juegos abren con Custom Tabs o navegador compatible; Atrás devuelve al catálogo. Solo se registra una apertura si Android acepta el lanzamiento. Esto no permite conocer si una página termina de cargar o si se completa una partida.
 
-La primera versión es **debug de prueba**, no una release firmada de producción. No garantiza la misma firma entre recompilaciones de Actions. Una APK con firma diferente exige desinstalar la anterior, lo que puede borrar datos locales. Para actualizaciones que conserven favoritos, usa versiones con la misma clave privada estable. No se incluye ninguna clave en este repositorio.
+## Catálogo y procedencia
 
-## Compilar
+Listdle se utiliza como referencia de estructura y categorías. Su robots.txt permite rastreo, pero no se localizó licencia para copiar masivamente su directorio o imágenes ni API pública documentada. Se utiliza una fuente adicional con permiso explícito: [Awesome Daily Minigames](https://github.com/guilyx/awesome-daily-minigames), publicada bajo **CC0-1.0**.
 
-Requiere JDK 17, Android SDK 35 y Build Tools 35.0.0. Android Studio puede instalar el SDK; configura `ANDROID_HOME` o `sdk.dir` en un `local.properties` que no se sube a Git.
+La instantánea, revisión inmutable, licencia y comprobaciones están en `catalog/sources/`. De 284 candidatos web se incluyen 278: **266 respuestas HTTP satisfactorias y 12 pendientes por HTTP 403**. Se excluyeron cinco destinos con fallos de conexión/certificado/resolución y un duplicado con la misma URL final. No se eluden bloqueos. Una respuesta HTTP no certifica que toda la lógica del juego funcione.
 
-```sh
-./gradlew testDebugUnitTest lintDebug assembleDebug
-```
+Las **278 miniaturas son composiciones originales** por categoría e ID, con símbolos, iniciales y patrones diferenciados. No son capturas ni logotipos oficiales. No se han copiado imágenes de terceros. Coil conserva soporte de imagen autorizada, caché, placeholder y fallback. La licencia de un directorio no autoriza automáticamente las imágenes de sus juegos.
 
-En Windows: `gradlew.bat testDebugUnitTest lintDebug assembleDebug`.
-Resultado: `app/build/outputs/apk/debug/app-debug.apk`.
+Parte de las descripciones reutilizables está en inglés. El idioma del juego se mantiene sin confirmar cuando la fuente no lo acredita. Se conservan las fichas de origen y los IDs anteriores.
 
-## Actualizar el catálogo sin cambiar la APK
+## Actualizaciones sin una APK nueva
 
-Edita `catalog/games.json`, incrementa `version`, valida y publica en `main`. La aplicación descarga:
+La app incluye `catalog/games.json` y descarga su versión pública:
 
 `https://raw.githubusercontent.com/adritankian-bit/dlebox-android/main/catalog/games.json`
 
-Se valida antes de sustituir la copia local con escritura atómica. Un error de red, JSON inválido o retroceso de versión mantiene el catálogo anterior. Máximo 2 MB y 5.000 entradas. No se descarga código ejecutable ni se requiere una nueva APK. El catálogo incluido se actualiza también al compilar.
+Mantiene el esquema 1 para compatibilidad anterior, con campos opcionales nuevos. Valida versión, IDs, URLs, duplicados, fechas e imágenes antes de escribir atómicamente la caché. Rechaza un catálogo vacío, corrupto o anterior y conserva el último válido. Carga la copia válida más reciente entre la incluida y la caché. Las fichas de favoritos e historial siguen disponibles aunque un juego desaparezca del catálogo.
 
-## Añadir juegos sin Kotlin
+## Importación reproducible
 
-Duplica una entrada JSON. Asigna un ID estable, nombre, descripción propia, categoría en español y `gameUrl` HTTPS original. Conserva `sourceUrl` como atribución. Comprueba el enlace, indica `linkStatus` y `verifiedAt` honestamente. No reutilices un ID para otro juego.
-
-Sin permiso de imagen utiliza `thumbnailType: "generated"`, `thumbnailUrl: null` y explica el origen en `thumbnailSource`. Una imagen externa exige HTTPS, tipo `official` o `authorized` y evidencia de autorización en `thumbnailPermission`. Un metadato Open Graph por sí solo no concede licencia.
-
-Para importar un lote manual revisado, crea un array JSON de entradas con el mismo formato:
+Sin dependencias Python adicionales:
 
 ```sh
-python scripts/import_manual.py entradas.json
+# Reconstrucción exacta sin red desde las pruebas e instantánea guardadas
+python scripts/import_cc0.py
 python scripts/validate_catalog.py
 python -m unittest discover -s scripts -p 'test_*.py' -v
+
+# Nueva instantánea CC0 y comprobación HTTP con límites por dominio
+python scripts/import_cc0.py --fetch-source --verify
 ```
 
-El importador fusiona por ID, incrementa versión y rechaza duplicados de URL antes de escribir. No rastrea sitios ni descarga imágenes.
+La segunda opción incrementa la versión del catálogo. Consulta la fuente fijada, excluye entradas Reddit, preserva IDs, normaliza categorías al español, elimina duplicados y comprueba destinos con máximo cuatro trabajadores y una solicitud por segundo por host. No copia imágenes ni rastrea Listdle.
 
-## GitHub Actions y publicación
+El workflow manual **Actualizar catálogo CC0** ejecuta la importación y las pruebas y solo publica datos validados. Para añadir un lote revisado manualmente: `python scripts/import_manual.py entradas.json`. Usa IDs estables, HTTPS, procedencia y estado de verificación honesto. Las imágenes externas necesitan evidencia en `thumbnailPermission`; sin autorización usa `generated` y URL nula.
 
-`Android APK` se ejecuta en push a `main`, pull requests, etiquetas `v*` y manualmente. Valida JSON, ejecuta pruebas Kotlin/Python y lint, compila APK real y guarda un artifact. La etiqueta `v1.0.0` crea una prerelease con el APK y notas. Una etiqueta distinta exige actualizar versión, nombre del APK y notas en el workflow antes de publicar.
+## Compilar y publicar
+
+JDK 17, SDK 35 y Build Tools 35.0.0. Configura `ANDROID_HOME` o `sdk.dir` en un `local.properties` sin subir a Git.
 
 ```sh
-git tag v1.0.0
-git push origin v1.0.0
+./gradlew testDebugUnitTest lintDebug assembleDebug assembleDebugAndroidTest
 ```
 
-Firma futura: el workflow manual `APK con firma estable` recibe los secretos `DLEBOX_KEYSTORE_BASE64`, `DLEBOX_STORE_PASSWORD`, `DLEBOX_KEY_ALIAS` y `DLEBOX_KEY_PASSWORD`. La clave debe ser aportada y custodiada por el titular; no se genera ni publica aquí. Produce un artifact firmado sin publicarlo automáticamente.
+En Windows utiliza `gradlew.bat`. APK: `app/build/outputs/apk/debug/app-debug.apk`.
 
-## Privacidad y límites
+`Android APK` valida catálogo y compila en `main`, PR, ejecución manual y etiquetas `v*`. El nombre del APK se obtiene de `versionName`; al etiquetar se exige que coincida con la versión y que existan las notas correspondientes. Publica APK y SHA-256, no una Release vacía.
 
-Sin cuentas, notificaciones, anuncios propios, compras ni analíticas. Único permiso: Internet. El historial no se transmite por DleBox y la copia de seguridad automática está desactivada. Las páginas de juegos mantienen sus propias políticas, cookies y publicidad.
+`Android device tests` prueba interfaz/persistencia en API 35 y guarda capturas del recorrido en `DleBox-device-check`. Las imágenes proceden de un emulador real, no de mockups.
 
-Custom Tabs no permite detectar fallos HTTP internos ni saber si una partida se completó: “Recientes” registra la apertura. Ante un fallo del sitio, vuelve con Atrás y usa Jugar de nuevo o Abrir en navegador desde la ficha. No se modifica contenido de los juegos.
+Para futuras versiones con firma estable está preparado `APK con firma estable`, que recibe `DLEBOX_KEYSTORE_BASE64`, `DLEBOX_STORE_PASSWORD`, `DLEBOX_KEY_ALIAS` y `DLEBOX_KEY_PASSWORD` como secretos. No hay claves privadas en este repositorio.
 
-Pruebas unitarias cubren modelo y serialización; no sustituyen la prueba de persistencia real tras reinicio, actualización e instalación en Samsung. Consulta [estado de verificación](docs/VERIFICACION.md).
+## Arquitectura y documentación
 
-## Estructura y ampliación
+Se conserva MVVM y las dependencias de producción. `Catalog.kt`: datos, compatibilidad, validación, búsqueda/ordenación. `LibraryViewModel.kt`: DataStore y descarga/caché. `MainActivity.kt`: navegación y pantallas. `LibraryComponents.kt`: tarjetas/listas/vacíos. `GameArtwork.kt`: ilustraciones originales y Coil. `GameBrowser.kt`: apertura y registro condicionado al éxito.
 
-`Catalog.kt` contiene formato, validación, búsqueda y modelo local. `LibraryViewModel.kt` gestiona DataStore y descarga/caché. `MainActivity.kt` contiene Compose y navegación. `catalog/`, `scripts/` y `.github/workflows/` mantienen datos y automatización separados de la interfaz. Los IDs y snapshots permiten añadir exportación de favoritos, fuentes y filtros de idioma en versiones posteriores.
-
-Código del proyecto bajo MIT. Nombres, juegos y marcas pertenecen a sus autores; la licencia no concede derechos sobre contenido externo.
+Consulta [auditoría previa](docs/AUDITORIA-v2.md), [informe v2](docs/VERIFICACION-v2.md) y [notas v2](docs/RELEASE-v2.0.0.md). MIT para el código del proyecto; CC0 para la fuente indicada. Los juegos y marcas pertenecen a sus autores. El historial permanece local; la copia de seguridad automática está desactivada. El navegador tiene sus propias cookies y políticas.

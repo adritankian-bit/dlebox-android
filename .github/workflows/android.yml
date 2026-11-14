@@ -32,20 +32,31 @@ jobs:
           chmod +x gradlew
           ./gradlew testDebugUnitTest lintDebug assembleDebug --no-daemon
       - name: Preparar APK de prueba
-        run: cp app/build/outputs/apk/debug/app-debug.apk DleBox-v1.0.0.apk
+        run: |
+          VERSION=$(sed -n 's/.*versionName = "\(.*\)"/\1/p' app/build.gradle.kts)
+          test -n "$VERSION"
+          APK_NAME="DleBox-v${VERSION}.apk"
+          cp app/build/outputs/apk/debug/app-debug.apk "$APK_NAME"
+          sha256sum "$APK_NAME" > "$APK_NAME.sha256"
+          echo "APK_NAME=$APK_NAME" >> "$GITHUB_ENV"
+          echo "APP_VERSION=$VERSION" >> "$GITHUB_ENV"
       - uses: actions/upload-artifact@v4
         with:
           name: DleBox-debug
-          path: DleBox-v1.0.0.apk
+          path: |
+            ${{ env.APK_NAME }}
+            ${{ env.APK_NAME }}.sha256
       - name: Publicar versión de prueba
         if: startsWith(github.ref, 'refs/tags/v')
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          test "${GITHUB_REF_NAME}" = "v1.0.0"
+          test "${GITHUB_REF_NAME}" = "v${APP_VERSION}"
+          NOTES="docs/RELEASE-${GITHUB_REF_NAME}.md"
+          test -f "$NOTES"
           if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
-            gh release upload "$GITHUB_REF_NAME" DleBox-v1.0.0.apk --clobber
-            gh release edit "$GITHUB_REF_NAME" --notes-file docs/RELEASE-v1.0.0.md --prerelease
+            gh release upload "$GITHUB_REF_NAME" "$APK_NAME" "$APK_NAME.sha256" --clobber
+            gh release edit "$GITHUB_REF_NAME" --notes-file "$NOTES" --prerelease
           else
-            gh release create "$GITHUB_REF_NAME" DleBox-v1.0.0.apk --title "DleBox v1.0.0 · prueba" --notes-file docs/RELEASE-v1.0.0.md --prerelease --verify-tag
+            gh release create "$GITHUB_REF_NAME" "$APK_NAME" "$APK_NAME.sha256" --title "DleBox ${GITHUB_REF_NAME} · prueba" --notes-file "$NOTES" --prerelease --verify-tag
           fi

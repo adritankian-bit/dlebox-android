@@ -1,0 +1,2269 @@
+{
+  "wordle": {
+    "url": "https://www.nytimes.com/games/wordle/index.html",
+    "checkedAt": "2026-11-14T01:22:50.914565+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nytimes.com/games/wordle/index.html",
+    "state": "verified"
+  },
+  "waffle": {
+    "url": "https://wafflegame.net/",
+    "checkedAt": "2026-11-14T01:22:50.914565+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://wafflegame.net/",
+    "state": "verified"
+  },
+  "globle": {
+    "url": "https://globle-game.com/",
+    "checkedAt": "2026-11-14T01:22:50.915086+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://globle-game.com/",
+    "state": "verified"
+  },
+  "murdle": {
+    "url": "https://murdle.com/",
+    "checkedAt": "2026-11-14T01:22:50.915086+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://murdle.com/",
+    "state": "verified"
+  },
+  "timeguessr": {
+    "url": "https://timeguessr.com/",
+    "checkedAt": "2026-11-14T01:22:52.329657+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://timeguessr.com/",
+    "state": "verified"
+  },
+  "filmlink": {
+    "url": "https://www.filmlink.io/",
+    "checkedAt": "2026-11-14T01:22:52.362016+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.filmlink.io/",
+    "state": "verified"
+  },
+  "absurdle": {
+    "url": "https://qntm.org/files/absurdle/absurdle.html",
+    "checkedAt": "2026-11-14T01:22:52.377781+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://qntm.org/files/absurdle/absurdle.html",
+    "state": "verified"
+  },
+  "antiwordle": {
+    "url": "https://www.antiwordle.com/",
+    "checkedAt": "2026-11-14T01:22:52.707743+00:00",
+    "method": "HEAD",
+    "state": "excluded",
+    "reason": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)>"
+  },
+  "crosswordle": {
+    "url": "https://crosswordle.com/",
+    "checkedAt": "2026-11-14T01:22:53.645008+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://crosswordle.com/",
+    "state": "verified"
+  },
+  "dordle": {
+    "url": "https://zaratustra.itch.io/dordle",
+    "checkedAt": "2026-11-14T01:22:53.834499+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://zaratustra.itch.io/dordle",
+    "state": "verified"
+  },
+  "duotrigordle": {
+    "url": "https://duotrigordle.com/",
+    "checkedAt": "2026-11-14T01:22:53.857021+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://duotrigordle.com/",
+    "state": "verified"
+  },
+  "fibble": {
+    "url": "https://fibble.xyz/",
+    "checkedAt": "2026-11-14T01:22:54.184198+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://fibble.xyz/",
+    "state": "verified"
+  },
+  "hello-wordl": {
+    "url": "https://hellowordl.net/",
+    "checkedAt": "2026-11-14T01:22:55.027887+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://hellowordl.net/",
+    "state": "verified"
+  },
+  "le-mot": {
+    "url": "https://wordle.louan.me/",
+    "checkedAt": "2026-11-14T01:22:55.428686+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://wordle.louan.me/",
+    "state": "verified"
+  },
+  "lirdle": {
+    "url": "https://lirdle.com/",
+    "checkedAt": "2026-11-14T01:22:55.622836+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://lirdle.com/",
+    "state": "verified"
+  },
+  "octordle": {
+    "url": "https://www.britannica.com/games/octordle/",
+    "checkedAt": "2026-11-14T01:22:56.137994+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.merriam-webster.com/games/octordle/",
+    "state": "verified"
+  },
+  "polygonle": {
+    "url": "https://www.polygonle.com/",
+    "checkedAt": "2026-11-14T01:22:56.580697+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.polygonle.com/",
+    "state": "verified"
+  },
+  "quordle": {
+    "url": "https://www.merriam-webster.com/games/quordle/",
+    "checkedAt": "2026-11-14T01:22:56.805561+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.merriam-webster.com/games/quordle/",
+    "state": "verified"
+  },
+  "reversle": {
+    "url": "https://reversle.net/",
+    "checkedAt": "2026-11-14T01:22:57.647143+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://reversle.net/",
+    "state": "verified"
+  },
+  "squardle": {
+    "url": "https://fubargames.se/squardle/",
+    "checkedAt": "2026-11-14T01:22:58.124941+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://fubargames.se/squardle/",
+    "state": "verified"
+  },
+  "squareword": {
+    "url": "https://squareword.org/",
+    "checkedAt": "2026-11-14T01:22:58.385418+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://squareword.org/",
+    "state": "verified"
+  },
+  "survivle": {
+    "url": "https://lazyguyy.github.io/survivle/",
+    "checkedAt": "2026-11-14T01:22:58.390378+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://lazyguyy.github.io/survivle/",
+    "state": "verified"
+  },
+  "sutom": {
+    "url": "https://sutom.nocle.fr/",
+    "checkedAt": "2026-11-14T01:22:58.971965+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://sutom.nocle.fr/",
+    "state": "verified"
+  },
+  "term-ooo": {
+    "url": "https://term.ooo/",
+    "checkedAt": "2026-11-14T01:22:59.800387+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://term.ooo/",
+    "state": "verified"
+  },
+  "vowelkit": {
+    "url": "https://www.vowelkit.com/daily",
+    "checkedAt": "2026-11-14T01:22:59.805589+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.vowelkit.com/daily",
+    "state": "verified"
+  },
+  "word-peaks": {
+    "url": "https://vegeta897.github.io/word-peaks/",
+    "checkedAt": "2026-11-14T01:22:59.852618+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://vegeta897.github.io/word-peaks/",
+    "state": "verified"
+  },
+  "wordiply": {
+    "url": "https://www.wordiply.com/",
+    "checkedAt": "2026-11-14T01:23:00.323581+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.wordiply.com/",
+    "state": "verified"
+  },
+  "wordlelike": {
+    "url": "https://wordlelike.com/",
+    "checkedAt": "2026-11-14T01:23:01.273859+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://wordlelike.com/",
+    "state": "verified"
+  },
+  "word-bridge": {
+    "url": "https://bludle.com/wordbridge/",
+    "checkedAt": "2026-11-14T01:23:01.409882+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://bludle.com/wordbridge/",
+    "state": "verified"
+  },
+  "cemantle": {
+    "url": "https://cemantle.certitudes.org/",
+    "checkedAt": "2026-11-14T01:23:01.700009+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://cemantle.certitudes.org/",
+    "state": "verified"
+  },
+  "clueroll": {
+    "url": "https://clueroll.com/",
+    "checkedAt": "2026-11-14T01:23:01.972342+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://clueroll.com/",
+    "state": "verified"
+  },
+  "combinations": {
+    "url": "https://combinations.org/",
+    "checkedAt": "2026-11-14T01:23:02.701878+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://combinations.org/",
+    "state": "verified"
+  },
+  "conexo": {
+    "url": "https://conexo.ws/en",
+    "checkedAt": "2026-11-14T01:23:03.229213+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://conexo.ws/en",
+    "state": "verified"
+  },
+  "connections": {
+    "url": "https://www.nytimes.com/games/connections",
+    "checkedAt": "2026-11-14T01:23:03.448243+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nytimes.com/games/connections",
+    "state": "verified"
+  },
+  "contexto": {
+    "url": "https://contexto.me/",
+    "checkedAt": "2026-11-14T01:23:03.475811+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://contexto.me/",
+    "state": "verified"
+  },
+  "crossclimb": {
+    "url": "https://www.linkedin.com/games/crossclimb",
+    "checkedAt": "2026-11-14T01:23:04.382400+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.linkedin.com/games/crossclimb",
+    "state": "verified"
+  },
+  "kinship": {
+    "url": "https://playkinship.com/",
+    "checkedAt": "2026-11-14T01:23:04.762626+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://playkinship.com/",
+    "state": "verified"
+  },
+  "pedantle": {
+    "url": "https://pedantle.certitudes.org/",
+    "checkedAt": "2026-11-14T01:23:04.762626+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://pedantle.certitudes.org/",
+    "state": "verified"
+  },
+  "pimantle": {
+    "url": "https://semantle.pimanrul.es/",
+    "checkedAt": "2026-11-14T01:23:04.798744+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://semantle.pimanrul.es/",
+    "state": "verified"
+  },
+  "pinpoint": {
+    "url": "https://www.linkedin.com/games/pinpoint",
+    "checkedAt": "2026-11-14T01:23:05.927812+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.linkedin.com/games/pinpoint",
+    "state": "verified"
+  },
+  "pooplegame-fun": {
+    "url": "https://pooplegame.fun/",
+    "checkedAt": "2026-11-14T01:23:06.155558+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://pooplegame.fun/",
+    "state": "verified"
+  },
+  "puzzgrid": {
+    "url": "https://www.puzzgrid.com/",
+    "checkedAt": "2026-11-14T01:23:06.277635+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://puzzgrid.com/",
+    "state": "verified"
+  },
+  "redactle": {
+    "url": "https://redactle.net/",
+    "checkedAt": "2026-11-14T01:23:06.580510+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://redactle.net/",
+    "state": "verified"
+  },
+  "semantle": {
+    "url": "https://semantle.com/",
+    "checkedAt": "2026-11-14T01:23:07.257164+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://semantle.com/",
+    "state": "verified"
+  },
+  "stacks": {
+    "url": "https://www.theatlantic.com/games/stacks/",
+    "checkedAt": "2026-11-14T01:23:07.588915+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "weaver": {
+    "url": "https://weavergame.org/",
+    "checkedAt": "2026-11-14T01:23:07.871510+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://weavergame.org/",
+    "state": "verified"
+  },
+  "word-golf": {
+    "url": "https://word.golf/",
+    "checkedAt": "2026-11-14T01:23:08.107373+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://word.golf/",
+    "state": "verified"
+  },
+  "wordweb": {
+    "url": "https://blendletan.github.io/WordWeb/",
+    "checkedAt": "2026-11-14T01:23:08.619532+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://blendletan.github.io/WordWeb/",
+    "state": "verified"
+  },
+  "the-mini-crossword": {
+    "url": "https://www.nytimes.com/crosswords/game/mini",
+    "checkedAt": "2026-11-14T01:23:08.931630+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nytimes.com/crosswords/game/mini",
+    "state": "verified"
+  },
+  "the-atlantic-crossword": {
+    "url": "https://www.theatlantic.com/games/daily-crossword/",
+    "checkedAt": "2026-11-14T01:23:09.537757+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "bracket-city": {
+    "url": "https://www.theatlantic.com/games/bracket-city/",
+    "checkedAt": "2026-11-14T01:23:10.728912+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "crosshare": {
+    "url": "https://crosshare.org/",
+    "checkedAt": "2026-11-14T01:23:09.994924+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://crosshare.org/",
+    "state": "verified"
+  },
+  "crossword-club": {
+    "url": "https://crosswordclub.com/puzzles/",
+    "checkedAt": "2026-11-14T01:23:10.215867+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://crosswordclub.com/puzzles/",
+    "state": "verified"
+  },
+  "double-cross": {
+    "url": "https://everhall.ca/",
+    "checkedAt": "2026-11-14T01:23:10.728912+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://everhall.ca/",
+    "state": "verified"
+  },
+  "guardian-cryptic-crossword": {
+    "url": "https://www.theguardian.com/crosswords/series/cryptic",
+    "checkedAt": "2026-11-14T01:23:11.631383+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.theguardian.com/crosswords/series/cryptic",
+    "state": "verified"
+  },
+  "guardian-quick-crossword": {
+    "url": "https://www.theguardian.com/crosswords/series/quick",
+    "checkedAt": "2026-11-14T01:23:13.211634+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.theguardian.com/crosswords/series/quick",
+    "state": "verified"
+  },
+  "la-times-mini-crossword": {
+    "url": "https://www.latimes.com/games/mini-crossword",
+    "checkedAt": "2026-11-14T01:23:11.906949+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.latimes.com/games/mini-crossword",
+    "state": "verified"
+  },
+  "lex-mini-crossword": {
+    "url": "https://lex.games/mini/",
+    "checkedAt": "2026-11-14T01:23:12.220992+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://lex.games/mini/",
+    "state": "verified"
+  },
+  "minute-cryptic": {
+    "url": "https://www.minutecryptic.com/",
+    "checkedAt": "2026-11-14T01:23:13.211634+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.minutecryptic.com/",
+    "state": "verified"
+  },
+  "puzzmo-crossword": {
+    "url": "https://www.puzzmo.com/play/crossword",
+    "checkedAt": "2026-11-14T01:23:13.488202+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.puzzmo.com/play/crossword",
+    "state": "verified"
+  },
+  "stat-mini-crossword": {
+    "url": "https://www.statnews.com/stat-mini-crossword/",
+    "checkedAt": "2026-11-14T01:23:13.978617+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.statnews.com/stat-mini-crossword/",
+    "state": "verified"
+  },
+  "unolingo": {
+    "url": "https://games.usatoday.com/games/uclick-unolingo",
+    "checkedAt": "2026-11-14T01:23:14.589486+00:00",
+    "method": "HEAD",
+    "state": "excluded",
+    "reason": "URLError: <urlopen error [Errno 11002] getaddrinfo failed>"
+  },
+  "washington-post-crossword": {
+    "url": "https://www.washingtonpost.com/games/crossword/",
+    "checkedAt": "2026-11-14T01:23:14.671611+00:00",
+    "method": "HEAD",
+    "state": "excluded",
+    "reason": "TimeoutError: The read operation timed out"
+  },
+  "spelling-bee": {
+    "url": "https://www.nytimes.com/puzzles/spelling-bee",
+    "checkedAt": "2026-11-14T01:23:14.912723+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nytimes.com/puzzles/spelling-bee",
+    "state": "verified"
+  },
+  "beehints-daily": {
+    "url": "https://www.beehints.com/play",
+    "checkedAt": "2026-11-14T01:23:15.350093+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.beehints.com/play",
+    "state": "verified"
+  },
+  "blossom": {
+    "url": "https://www.merriam-webster.com/games/blossom-word-game",
+    "checkedAt": "2026-11-14T01:23:16.236691+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.merriam-webster.com/games/blossom-word-game",
+    "state": "verified"
+  },
+  "bongo": {
+    "url": "https://www.puzzmo.com/game/bongo",
+    "checkedAt": "2026-11-14T01:23:16.705998+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.puzzmo.com/game/bongo",
+    "state": "verified"
+  },
+  "cell-tower": {
+    "url": "https://www.andrewt.net/puzzles/cell-tower",
+    "checkedAt": "2026-11-14T01:23:16.828474+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.andrewt.net/puzzles/cell-tower/",
+    "state": "verified"
+  },
+  "elided": {
+    "url": "https://elided.app/",
+    "checkedAt": "2026-11-14T01:23:17.581445+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://elided.app/",
+    "state": "verified"
+  },
+  "jumble-daily": {
+    "url": "https://fun.chicagotribune.com/game/tca-jumble-daily/",
+    "checkedAt": "2026-11-14T01:23:18.304967+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://fun.chicagotribune.com/game/tca-jumble-daily/",
+    "state": "verified"
+  },
+  "jumblie": {
+    "url": "https://jumblie.com/",
+    "checkedAt": "2026-11-14T01:23:18.958041+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://jumblie.com/",
+    "state": "verified"
+  },
+  "letter-boxed": {
+    "url": "https://www.nytimes.com/puzzles/letter-boxed",
+    "checkedAt": "2026-11-14T01:23:19.650604+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nytimes.com/puzzles/letter-boxed",
+    "state": "verified"
+  },
+  "nynr": {
+    "url": "https://nynr.day/",
+    "checkedAt": "2026-11-14T01:23:19.874294+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://nynr.day/",
+    "state": "verified"
+  },
+  "scores": {
+    "url": "https://scores.lol/",
+    "checkedAt": "2026-11-14T01:23:20.408547+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://scores.lol/",
+    "state": "verified"
+  },
+  "scrimp": {
+    "url": "https://playscrimp.com/",
+    "checkedAt": "2026-11-14T01:23:21.161311+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://playscrimp.com/",
+    "state": "verified"
+  },
+  "spelltower": {
+    "url": "https://www.puzzmo.com/play/spelltower",
+    "checkedAt": "2026-11-14T01:23:21.252942+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.puzzmo.com/play/spelltower",
+    "state": "verified"
+  },
+  "squaredle": {
+    "url": "https://squaredle.app/",
+    "checkedAt": "2026-11-14T01:23:22.223164+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://squaredle.app/",
+    "state": "verified"
+  },
+  "stepwords": {
+    "url": "https://stepwords.xyz/",
+    "checkedAt": "2026-11-14T01:23:22.553064+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://stepwords.xyz/",
+    "state": "verified"
+  },
+  "strands": {
+    "url": "https://www.nytimes.com/games/strands",
+    "checkedAt": "2026-11-14T01:23:22.597320+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nytimes.com/games/strands",
+    "state": "verified"
+  },
+  "triplet": {
+    "url": "https://triplet.daily-game.page/",
+    "checkedAt": "2026-11-14T01:23:23.798531+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://triplet.daily-game.page/",
+    "state": "verified"
+  },
+  "typeshift": {
+    "url": "https://www.puzzmo.com/play/typeshift",
+    "checkedAt": "2026-11-14T01:23:23.870618+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.puzzmo.com/play/typeshift",
+    "state": "verified"
+  },
+  "wordchute": {
+    "url": "https://wordchute.com/",
+    "checkedAt": "2026-11-14T01:23:24.100096+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://wordchute.com/",
+    "state": "verified"
+  },
+  "wordflower": {
+    "url": "https://www.latimes.com/games/wordflower",
+    "checkedAt": "2026-11-14T01:23:25.169424+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.latimes.com/games/wordflower",
+    "state": "verified"
+  },
+  "wordpaths": {
+    "url": "https://kindaneatgames.com/wordpaths/",
+    "checkedAt": "2026-11-14T01:23:25.265819+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://kindaneatgames.com/wordpaths/",
+    "state": "verified"
+  },
+  "numgrove": {
+    "url": "https://numgrove.com/",
+    "checkedAt": "2026-11-14T01:23:25.732097+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://numgrove.com/",
+    "state": "verified"
+  },
+  "bulkle": {
+    "url": "https://www.outletpicks.com/bulkle",
+    "checkedAt": "2026-11-14T01:23:26.684081+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.outletpicks.com/bulkle",
+    "state": "verified"
+  },
+  "mathler": {
+    "url": "https://www.mathler.com/",
+    "checkedAt": "2026-11-14T01:23:26.684081+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.mathler.com/",
+    "state": "verified"
+  },
+  "nerdle": {
+    "url": "https://nerdlegame.com/",
+    "checkedAt": "2026-11-14T01:23:27.073530+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://nerdlegame.com/",
+    "state": "verified"
+  },
+  "numble": {
+    "url": "https://numble.wtf/",
+    "checkedAt": "2026-11-14T01:23:28.140898+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://numble.wtf/",
+    "state": "verified"
+  },
+  "numle": {
+    "url": "https://martintale.com/numle/",
+    "checkedAt": "2026-11-14T01:23:28.296967+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://martintale.com/numle/",
+    "state": "verified"
+  },
+  "primel": {
+    "url": "https://converged.yt/primel/",
+    "checkedAt": "2026-11-14T01:23:28.405358+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://converged.yt/primel/",
+    "state": "verified"
+  },
+  "summle": {
+    "url": "https://summle.net/",
+    "checkedAt": "2026-11-14T01:23:29.450476+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://summle.net/",
+    "state": "verified"
+  },
+  "sumplete": {
+    "url": "https://sumplete.com/daily",
+    "checkedAt": "2026-11-14T01:23:29.699577+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://sumplete.com/",
+    "state": "verified"
+  },
+  "think-in-odds": {
+    "url": "https://thinkinodds.com/",
+    "checkedAt": "2026-11-14T01:23:29.836500+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://thinkinodds.com/",
+    "state": "verified"
+  },
+  "rulebreaker": {
+    "url": "https://bludle.com/rulebreaker/",
+    "checkedAt": "2026-11-14T01:23:31.024522+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://bludle.com/rulebreaker/",
+    "state": "verified"
+  },
+  "alembic": {
+    "url": "https://goblinarcade.com/play/alembic",
+    "checkedAt": "2026-11-14T01:23:31.324845+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://goblinarcade.com/play/alembic",
+    "state": "verified"
+  },
+  "arrowgame": {
+    "url": "https://arrowgame.app/",
+    "checkedAt": "2026-11-14T01:23:31.522647+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://arrowgame.app/",
+    "state": "verified"
+  },
+  "balance-grid": {
+    "url": "https://playbalancegrid.com/daily/",
+    "checkedAt": "2026-11-14T01:23:32.863980+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://playbalancegrid.com/daily/",
+    "state": "verified"
+  },
+  "blind-corners": {
+    "url": "https://arkai.win/games/blind-corners/",
+    "checkedAt": "2026-11-14T01:23:32.897288+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://arkai.win/games/blind-corners/",
+    "state": "verified"
+  },
+  "brainbashers-daily-puzzle": {
+    "url": "https://www.brainbashers.com/dailypuzzle.asp",
+    "checkedAt": "2026-11-14T01:23:32.973297+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.brainbashers.com/dailypuzzle.asp",
+    "state": "verified"
+  },
+  "campsite": {
+    "url": "https://campsite.daily-game.page/",
+    "checkedAt": "2026-11-14T01:23:33.938561+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://campsite.daily-game.page/",
+    "state": "verified"
+  },
+  "clues-by-sam": {
+    "url": "https://cluesbysam.com/",
+    "checkedAt": "2026-11-14T01:23:34.200913+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://cluesbysam.com/",
+    "state": "verified"
+  },
+  "daily-akari": {
+    "url": "https://dailyakari.com/",
+    "checkedAt": "2026-11-14T01:23:34.208769+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://dailyakari.com/",
+    "state": "verified"
+  },
+  "daily-train-puzzle": {
+    "url": "https://griffinley.com/harold-miller/inglenook/",
+    "checkedAt": "2026-11-14T01:23:34.815945+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://griffinley.com/harold-miller/inglenook/",
+    "state": "verified"
+  },
+  "domino-fit": {
+    "url": "https://dominofit.isotropic.us/",
+    "checkedAt": "2026-11-14T01:23:35.424178+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://dominofit.isotropic.us/",
+    "state": "verified"
+  },
+  "features": {
+    "url": "https://features.games/",
+    "checkedAt": "2026-11-14T01:23:35.532524+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://features.games/",
+    "state": "verified"
+  },
+  "figure": {
+    "url": "https://figure.game/",
+    "checkedAt": "2026-11-14T01:23:35.535324+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://figure.game/",
+    "state": "verified"
+  },
+  "flipart": {
+    "url": "https://www.puzzmo.com/play/flip-art",
+    "checkedAt": "2026-11-14T01:23:36.356624+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.puzzmo.com/play/flip-art",
+    "state": "verified"
+  },
+  "goblin-maze": {
+    "url": "https://goblinarcade.com/play/goblin-maze",
+    "checkedAt": "2026-11-14T01:23:36.866904+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://goblinarcade.com/play/goblin-maze",
+    "state": "verified"
+  },
+  "ink-side-down": {
+    "url": "https://arkai.win/games/ink-side-down/",
+    "checkedAt": "2026-11-14T01:23:36.928121+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://arkai.win/games/ink-side-down/",
+    "state": "verified"
+  },
+  "lacey-s-web": {
+    "url": "https://lieofsight.com/web",
+    "checkedAt": "2026-11-14T01:23:37.183301+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://lieofsight.com/web",
+    "state": "verified"
+  },
+  "lie-of-sight": {
+    "url": "https://lieofsight.com/",
+    "checkedAt": "2026-11-14T01:23:38.561736+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://lieofsight.com/",
+    "state": "verified"
+  },
+  "nonodaily": {
+    "url": "https://www.nonodaily.com/",
+    "checkedAt": "2026-11-14T01:23:38.202374+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nonodaily.com/",
+    "state": "verified"
+  },
+  "one-step-late": {
+    "url": "https://arkai.win/games/one-step-late/",
+    "checkedAt": "2026-11-14T01:23:38.390113+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://arkai.win/games/one-step-late/",
+    "state": "verified"
+  },
+  "one-up-puzzle": {
+    "url": "https://www.oneuppuzzle.com/",
+    "checkedAt": "2026-11-14T01:23:38.561736+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "http://oneuppuzzle.com/",
+    "state": "verified"
+  },
+  "pips": {
+    "url": "https://www.nytimes.com/games/pips",
+    "checkedAt": "2026-11-14T01:23:39.484370+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nytimes.com/games/pips",
+    "state": "verified"
+  },
+  "queens": {
+    "url": "https://www.linkedin.com/games/queens",
+    "checkedAt": "2026-11-14T01:23:39.620382+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.linkedin.com/games/queens",
+    "state": "verified"
+  },
+  "regexle": {
+    "url": "https://regexle.com/",
+    "checkedAt": "2026-11-14T01:23:39.813364+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://regexle.com/",
+    "state": "verified"
+  },
+  "rex-s-fetch": {
+    "url": "https://lieofsight.com/fetch",
+    "checkedAt": "2026-11-14T01:23:40.696929+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://lieofsight.com/fetch",
+    "state": "verified"
+  },
+  "shikaku-of-the-day": {
+    "url": "https://shikakuofthe.day/",
+    "checkedAt": "2026-11-14T01:23:40.891259+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://shikakuofthe.day/",
+    "state": "verified"
+  },
+  "shinro-garden": {
+    "url": "https://shinro-garden.daily-game.page/",
+    "checkedAt": "2026-11-14T01:23:41.058493+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://shinro-garden.daily-game.page/",
+    "state": "verified"
+  },
+  "sudoku-nyt": {
+    "url": "https://www.nytimes.com/puzzles/sudoku",
+    "checkedAt": "2026-11-14T01:23:41.213645+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nytimes.com/puzzles/sudoku",
+    "state": "verified"
+  },
+  "sunset": {
+    "url": "https://sunset.daily-game.page/",
+    "checkedAt": "2026-11-14T01:23:42.096265+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://sunset.daily-game.page/",
+    "state": "verified"
+  },
+  "tango": {
+    "url": "https://www.linkedin.com/games/tango",
+    "checkedAt": "2026-11-14T01:23:42.176789+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.linkedin.com/games/tango",
+    "state": "verified"
+  },
+  "witlocked-daily-lock": {
+    "url": "https://witlocked.com/puzzles/daily-lock",
+    "checkedAt": "2026-11-14T01:23:42.433834+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://witlocked.com/puzzles/daily-lock",
+    "state": "verified"
+  },
+  "zebra-puzzles": {
+    "url": "https://www.zebrapuzzles.com/",
+    "checkedAt": "2026-11-14T01:23:42.506023+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.zebrapuzzles.com/",
+    "state": "verified"
+  },
+  "zip": {
+    "url": "https://www.linkedin.com/games/zip",
+    "checkedAt": "2026-11-14T01:23:44.021601+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.linkedin.com/games/zip",
+    "state": "verified"
+  },
+  "worldle": {
+    "url": "https://worldle.teuteuf.fr/",
+    "checkedAt": "2026-11-14T01:23:43.946382+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://worldle.teuteuf.fr/",
+    "state": "verified"
+  },
+  "countryle": {
+    "url": "https://www.countryle.com/",
+    "checkedAt": "2026-11-14T01:23:44.021601+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.countryle.com/",
+    "state": "verified"
+  },
+  "flagle": {
+    "url": "https://www.flagle.io/",
+    "checkedAt": "2026-11-14T01:23:44.159026+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.flagle.io/",
+    "state": "verified"
+  },
+  "geogrid": {
+    "url": "https://www.geogridgame.com/",
+    "checkedAt": "2026-11-14T01:23:45.274267+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.geogridgame.com/",
+    "state": "verified"
+  },
+  "geonections": {
+    "url": "https://geonections.com/",
+    "checkedAt": "2026-11-14T01:23:45.454757+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://geonections.com/",
+    "state": "verified"
+  },
+  "globle-capitals": {
+    "url": "https://globle-capitals.com/",
+    "checkedAt": "2026-11-14T01:23:45.503070+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://globle-capitals.com/",
+    "state": "verified"
+  },
+  "juxtastat": {
+    "url": "https://urbanstats.org/quiz.html",
+    "checkedAt": "2026-11-14T01:23:45.760204+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://urbanstats.org/quiz.html",
+    "state": "verified"
+  },
+  "mapster": {
+    "url": "https://mapster.teuteuf.fr/",
+    "checkedAt": "2026-11-14T01:23:46.589738+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://mapster.teuteuf.fr/",
+    "state": "verified"
+  },
+  "satle": {
+    "url": "https://satle.ca/",
+    "checkedAt": "2026-11-14T01:23:46.778563+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://satle.ca/",
+    "state": "verified"
+  },
+  "statele": {
+    "url": "https://statele.teuteuf.fr/",
+    "checkedAt": "2026-11-14T01:23:46.801551+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://statele.teuteuf.fr/",
+    "state": "verified"
+  },
+  "subwaydle": {
+    "url": "https://www.subwaydle.com/",
+    "checkedAt": "2026-11-14T01:23:47.235882+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.subwaydle.com/",
+    "state": "verified"
+  },
+  "tradle": {
+    "url": "https://oec.world/en/games/tradle",
+    "checkedAt": "2026-11-14T01:23:47.956875+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://oec.world/en/games/tradle",
+    "state": "verified"
+  },
+  "travle": {
+    "url": "https://travle.earth/",
+    "checkedAt": "2026-11-14T01:23:48.135286+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://travle.earth/",
+    "state": "verified"
+  },
+  "whereabouts": {
+    "url": "https://whereabouts.earth/daily/",
+    "checkedAt": "2026-11-14T01:23:48.190210+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://whereabouts.earth/daily/",
+    "state": "verified"
+  },
+  "wheretaken": {
+    "url": "https://wheretaken.teuteuf.fr/",
+    "checkedAt": "2026-11-14T01:23:48.672492+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://wheretaken.teuteuf.fr/",
+    "state": "verified"
+  },
+  "world-flag-games": {
+    "url": "https://worldflagmap.com/games/daily/",
+    "checkedAt": "2026-11-14T01:23:49.408617+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://worldflagmap.com/games/daily/",
+    "state": "verified"
+  },
+  "chrono": {
+    "url": "https://chrono.quest/",
+    "checkedAt": "2026-11-14T01:23:49.518390+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://chrono.quest/",
+    "state": "verified"
+  },
+  "chronophoto": {
+    "url": "https://www.chronophoto.app/",
+    "checkedAt": "2026-11-14T01:23:49.880396+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.chronophoto.app/",
+    "state": "verified"
+  },
+  "eraguessr": {
+    "url": "https://eraguessr.ai/play/daily",
+    "checkedAt": "2026-11-14T01:23:49.988497+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://eraguessr.ai/play/daily",
+    "state": "verified"
+  },
+  "guessnow": {
+    "url": "https://guessnow.fun/",
+    "checkedAt": "2026-11-14T01:23:50.753508+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://guessnow.fun/",
+    "state": "verified"
+  },
+  "timdle": {
+    "url": "https://www.timdle.com/",
+    "checkedAt": "2026-11-14T01:23:51.158761+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.timdle.com/",
+    "state": "verified"
+  },
+  "whentaken": {
+    "url": "https://whentaken.com/",
+    "checkedAt": "2026-11-14T01:23:51.321261+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://whentaken.com/",
+    "state": "verified"
+  },
+  "wikitrivia": {
+    "url": "https://wikitrivia.tomjwatson.com/daily",
+    "checkedAt": "2026-11-14T01:23:52.164150+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://wikitrivia.tomjwatson.com/daily",
+    "state": "verified"
+  },
+  "yeardle": {
+    "url": "https://histordle.com/yeardle",
+    "checkedAt": "2026-11-14T01:23:52.522433+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://histordle.com/yeardle/",
+    "state": "verified"
+  },
+  "bandle": {
+    "url": "https://bandle.app/",
+    "checkedAt": "2026-11-14T01:23:52.557230+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://bandle.app/",
+    "state": "verified"
+  },
+  "crosstune": {
+    "url": "https://crosstune.io/",
+    "checkedAt": "2026-11-14T01:23:52.630757+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://crosstune.io/",
+    "state": "verified"
+  },
+  "guess-the-audio": {
+    "url": "https://guesstheaudio.com/",
+    "checkedAt": "2026-11-14T01:23:53.527498+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://guesstheaudio.com/",
+    "state": "verified"
+  },
+  "harmonies": {
+    "url": "https://harmonies.io/",
+    "checkedAt": "2026-11-14T01:23:53.960539+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://harmonies.io/",
+    "state": "verified"
+  },
+  "heardle-daily": {
+    "url": "https://www.heardle.info/daily/",
+    "checkedAt": "2026-11-14T01:23:54.233850+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.heardle.info/daily/",
+    "state": "verified"
+  },
+  "lyricle": {
+    "url": "https://www.lyricle.app/",
+    "checkedAt": "2026-11-14T01:23:54.486087+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.lyricle.app/",
+    "state": "verified"
+  },
+  "meloguessr": {
+    "url": "https://meloguessr.com/",
+    "checkedAt": "2026-11-14T01:23:54.855670+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://meloguessr.com/",
+    "state": "verified"
+  },
+  "perfect-pitch-puzzle": {
+    "url": "https://www.perfectpitchpuzzle.com/",
+    "checkedAt": "2026-11-14T01:23:55.603368+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.perfectpitchpuzzle.com/",
+    "state": "verified"
+  },
+  "relatle": {
+    "url": "https://relatle.io/",
+    "checkedAt": "2026-11-14T01:23:55.903242+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://relatle.io/",
+    "state": "verified"
+  },
+  "sound-of-sliver": {
+    "url": "https://soundofsliver.com/",
+    "checkedAt": "2026-11-14T01:23:56.211447+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://soundofsliver.com/",
+    "state": "verified"
+  },
+  "spotle": {
+    "url": "https://spotle.io/",
+    "checkedAt": "2026-11-14T01:23:56.245189+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://spotle.io/",
+    "state": "verified"
+  },
+  "framed": {
+    "url": "https://framed.wtf/",
+    "checkedAt": "2026-11-14T01:23:57.048393+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://framed.wtf/",
+    "state": "verified"
+  },
+  "actorle": {
+    "url": "https://actorle.com/",
+    "checkedAt": "2026-11-14T01:23:57.296012+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://actorle.com/",
+    "state": "verified"
+  },
+  "box-office-game": {
+    "url": "https://boxofficega.me/",
+    "checkedAt": "2026-11-14T01:23:57.762548+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://boxofficega.me/",
+    "state": "verified"
+  },
+  "cinematrix": {
+    "url": "https://www.vulture.com/article/daily-movie-grid-trivia-game-cinematrix.html",
+    "checkedAt": "2026-11-14T01:23:58.016497+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.vulture.com/article/daily-movie-grid-trivia-game-cinematrix.html",
+    "state": "verified"
+  },
+  "cinenerdle": {
+    "url": "https://www.cinenerdle.app/",
+    "checkedAt": "2026-11-14T01:23:58.348635+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.cinenerdle.app/",
+    "state": "verified"
+  },
+  "emoji-flicks": {
+    "url": "https://simplegamestoday.com/emoji-flicks/",
+    "checkedAt": "2026-11-14T01:23:58.600604+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://simplegamestoday.com/emoji-flicks/",
+    "state": "verified"
+  },
+  "filmlink-5ed082b9": {
+    "url": "https://filmlink.io/",
+    "checkedAt": "2026-11-14T01:23:59.117662+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.filmlink.io/",
+    "state": "verified"
+  },
+  "flickle": {
+    "url": "https://flickle.app/",
+    "checkedAt": "2026-11-14T01:23:59.497100+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://flickle.app/",
+    "state": "verified"
+  },
+  "gaps": {
+    "url": "https://gaps.wtf/",
+    "checkedAt": "2026-11-14T01:23:59.974113+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://gaps.wtf/",
+    "state": "verified"
+  },
+  "letterboxdle": {
+    "url": "https://letterboxdle.net/",
+    "checkedAt": "2026-11-14T01:24:00.305832+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://letterboxdle.net/",
+    "state": "verified"
+  },
+  "movie-grid": {
+    "url": "https://moviegrid.io/",
+    "checkedAt": "2026-11-14T01:24:00.831244+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://moviegrid.io/",
+    "state": "verified"
+  },
+  "moviedle": {
+    "url": "https://moviedle.xyz/",
+    "checkedAt": "2026-11-14T01:24:00.910026+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://moviedle.xyz/",
+    "state": "verified"
+  },
+  "plotwords": {
+    "url": "https://plotwords.com/daily",
+    "checkedAt": "2026-11-14T01:24:01.296172+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://plotwords.com/daily",
+    "state": "verified"
+  },
+  "immaculate-grid": {
+    "url": "https://www.sports-reference.com/immaculate-grid/",
+    "checkedAt": "2026-11-14T01:24:01.618264+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "ballometry": {
+    "url": "https://www.ballometry.com/",
+    "checkedAt": "2026-11-14T01:24:02.278826+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.ballometry.com/",
+    "state": "verified"
+  },
+  "connections-sports-edition": {
+    "url": "https://www.nytimes.com/athletic/connections-sports-edition",
+    "checkedAt": "2026-11-14T01:24:02.595129+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nytimes.com/athletic/connections-sports-edition/",
+    "state": "verified"
+  },
+  "daily-walkoff": {
+    "url": "https://www.dailywalkoff.com/",
+    "checkedAt": "2026-11-14T01:24:02.665320+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.dailywalkoff.com/",
+    "state": "verified"
+  },
+  "hoopgrids": {
+    "url": "https://www.hoopgrids.com/",
+    "checkedAt": "2026-11-14T01:24:02.812223+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.hoopgrids.com/",
+    "state": "verified"
+  },
+  "immaculate-footy": {
+    "url": "https://www.sports-reference.com/immaculate-footy/",
+    "checkedAt": "2026-11-14T01:24:03.812288+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "mlb-pickle": {
+    "url": "https://www.mlbpickle.com/",
+    "checkedAt": "2026-11-14T01:24:04.081949+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.mlbpickle.com/",
+    "state": "verified"
+  },
+  "poeltl": {
+    "url": "https://poeltl.nbpa.com/",
+    "checkedAt": "2026-11-14T01:24:04.094480+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://poeltl.nbpa.com/landing-page",
+    "state": "verified"
+  },
+  "puckdoku": {
+    "url": "https://www.puckdoku.com/",
+    "checkedAt": "2026-11-14T01:24:04.334417+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.puckdoku.com/",
+    "state": "verified"
+  },
+  "weddle": {
+    "url": "https://www.weddlegame.com/",
+    "checkedAt": "2026-11-14T01:24:04.999278+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.weddlegame.com/",
+    "state": "verified"
+  },
+  "gamedle": {
+    "url": "https://www.gamedle.wtf/",
+    "checkedAt": "2026-11-14T01:24:05.436465+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.gamedle.wtf/",
+    "state": "verified"
+  },
+  "balatrodle": {
+    "url": "https://www.balatrodle.com/",
+    "checkedAt": "2026-11-14T01:24:05.816844+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.balatrodle.com/",
+    "state": "verified"
+  },
+  "guessthe-game": {
+    "url": "https://guessthe.game/",
+    "checkedAt": "2026-11-14T01:24:06.222072+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://guessthe.game/",
+    "state": "verified"
+  },
+  "howlongtobeat-daily": {
+    "url": "https://howlongtobeat.com/play",
+    "checkedAt": "2026-11-14T01:24:06.784110+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://howlongtobeat.com/play",
+    "state": "verified"
+  },
+  "isaaconnect": {
+    "url": "https://isaaconnect.com/",
+    "checkedAt": "2026-11-14T01:24:06.786123+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://isaaconnect.com/",
+    "state": "verified"
+  },
+  "loldle": {
+    "url": "https://loldle.net/",
+    "checkedAt": "2026-11-14T01:24:07.167811+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://loldle.net/",
+    "state": "verified"
+  },
+  "loldoku": {
+    "url": "https://www.loldoku.gg/",
+    "checkedAt": "2026-11-14T01:24:07.489680+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.loldoku.gg/",
+    "state": "verified"
+  },
+  "minecraftle": {
+    "url": "https://minecraftle.zachmanson.com/",
+    "checkedAt": "2026-11-14T01:24:08.118342+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://minecraftle.zachmanson.com/",
+    "state": "verified"
+  },
+  "pokedle": {
+    "url": "https://pokedle.net/",
+    "checkedAt": "2026-11-14T01:24:08.224116+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://pokedle.net/",
+    "state": "verified"
+  },
+  "pokedoku": {
+    "url": "https://pokedoku.com/",
+    "checkedAt": "2026-11-14T01:24:08.422748+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://pokedoku.com/",
+    "state": "verified"
+  },
+  "seekade": {
+    "url": "https://seekade.com/",
+    "checkedAt": "2026-11-14T01:24:08.897774+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://seekade.com/",
+    "state": "verified"
+  },
+  "smashdle": {
+    "url": "https://smashdle.net/",
+    "checkedAt": "2026-11-14T01:24:09.492693+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://smashdle.net/",
+    "state": "verified"
+  },
+  "squirdle": {
+    "url": "https://squirdle.fireblend.com/daily.html",
+    "checkedAt": "2026-11-14T01:24:09.928113+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://squirdle.fireblend.com/daily.html",
+    "state": "verified"
+  },
+  "stardewdle": {
+    "url": "https://www.stardewdle.com/",
+    "checkedAt": "2026-11-14T01:24:10.302014+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.stardewdle.com/",
+    "state": "verified"
+  },
+  "steamdle": {
+    "url": "https://steamdle.com/",
+    "checkedAt": "2026-11-14T01:24:10.387969+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://steamdle.com/",
+    "state": "verified"
+  },
+  "foodiegame": {
+    "url": "https://www.foodiegame.org/",
+    "checkedAt": "2026-11-14T01:24:10.767878+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.foodiegame.org/",
+    "state": "verified"
+  },
+  "daily-dozen-trivia": {
+    "url": "https://dailydozentrivia.com/",
+    "checkedAt": "2026-11-14T01:24:11.262960+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://dailydozentrivia.com/",
+    "state": "verified"
+  },
+  "factle": {
+    "url": "https://frontofficesports.com/trivia/factle",
+    "checkedAt": "2026-11-14T01:24:11.667906+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://frontofficesports.com/trivia/factle/",
+    "state": "verified"
+  },
+  "floored": {
+    "url": "https://playfloored.com/",
+    "checkedAt": "2026-11-14T01:24:11.843995+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://playfloored.com/",
+    "state": "verified"
+  },
+  "foodguessr": {
+    "url": "https://www.foodguessr.com/",
+    "checkedAt": "2026-11-14T01:24:12.194884+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.foodguessr.com/",
+    "state": "verified"
+  },
+  "google-feud": {
+    "url": "https://googlefeud.com/",
+    "checkedAt": "2026-11-14T01:24:12.615645+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://googlefeud.com/",
+    "state": "verified"
+  },
+  "jeopardy-j6": {
+    "url": "https://www.jeopardy.com/play/j6",
+    "checkedAt": "2026-11-14T01:24:13.207826+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.jeopardy.com/play/j6",
+    "state": "verified"
+  },
+  "krillion-space": {
+    "url": "https://krilion.app/",
+    "checkedAt": "2026-11-14T01:24:13.879492+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "nanizo": {
+    "url": "https://nanizo.com/en/daily/",
+    "checkedAt": "2026-11-14T01:24:13.961852+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://nanizo.com/en/daily/",
+    "state": "verified"
+  },
+  "on-the-record": {
+    "url": "https://www.washingtonpost.com/news-quiz",
+    "checkedAt": "2026-11-14T01:24:14.038242+00:00",
+    "method": "HEAD",
+    "state": "excluded",
+    "reason": "TimeoutError: The read operation timed out"
+  },
+  "rankle": {
+    "url": "https://www.rankle.app/",
+    "checkedAt": "2026-11-14T01:24:14.785310+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.rankle.app/",
+    "state": "verified"
+  },
+  "revealed": {
+    "url": "https://www.britannica.com/games/revealed",
+    "checkedAt": "2026-11-14T01:24:15.190082+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "riddl-ing": {
+    "url": "https://riddl.ing/",
+    "checkedAt": "2026-11-14T01:24:15.989302+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://riddl.ing/",
+    "state": "verified"
+  },
+  "shople": {
+    "url": "https://playshople.com/",
+    "checkedAt": "2026-11-14T01:24:16.405042+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://playshople.com/",
+    "state": "verified"
+  },
+  "spaceillion": {
+    "url": "https://spaceillion.com/",
+    "checkedAt": "2026-11-14T01:24:16.471819+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://spaceillion.com/",
+    "state": "verified"
+  },
+  "thrice": {
+    "url": "https://thrice.geekswhodrink.com/",
+    "checkedAt": "2026-11-14T01:24:17.669711+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://thrice.geekswhodrink.com/",
+    "state": "verified"
+  },
+  "tightrope": {
+    "url": "https://www.britannica.com/quiz/tightrope",
+    "checkedAt": "2026-11-14T01:24:17.783964+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "uncommon-trivia": {
+    "url": "https://www.uncommontrivia.com/",
+    "checkedAt": "2026-11-14T01:24:17.799965+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://uncommontrivia.com/",
+    "state": "verified"
+  },
+  "the-wiki-game-daily": {
+    "url": "https://www.thewikigamedaily.com/",
+    "checkedAt": "2026-11-14T01:24:18.949672+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.thewikigamedaily.com/",
+    "state": "verified"
+  },
+  "wikicards-trivia": {
+    "url": "https://playwikicards.com/trivia-questions/",
+    "checkedAt": "2026-11-14T01:24:19.446093+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://playwikicards.com/trivia-questions/",
+    "state": "verified"
+  },
+  "artle": {
+    "url": "https://www.nga.gov/artle.html",
+    "checkedAt": "2026-11-14T01:24:19.704851+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "angle": {
+    "url": "https://angle.wtf/",
+    "checkedAt": "2026-11-14T01:24:20.571674+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://angle.wtf/",
+    "state": "verified"
+  },
+  "ballpark": {
+    "url": "https://ballparkdaily.com/",
+    "checkedAt": "2026-11-14T01:24:20.837374+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://ballparkdaily.com/",
+    "state": "verified"
+  },
+  "chroma": {
+    "url": "https://robson.plus/chroma",
+    "checkedAt": "2026-11-14T01:24:20.933151+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://robson.plus/chroma/",
+    "state": "verified"
+  },
+  "colorecall": {
+    "url": "https://www.colorecall.com/",
+    "checkedAt": "2026-11-14T01:24:21.860685+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.colorecall.com/",
+    "state": "verified"
+  },
+  "colorfle": {
+    "url": "https://colorfle.com/",
+    "checkedAt": "2026-11-14T01:24:22.236657+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://colorfle.com/",
+    "state": "verified"
+  },
+  "costcodle": {
+    "url": "https://costcodle.com/",
+    "checkedAt": "2026-11-14T01:24:22.866449+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://costcodle.com/",
+    "state": "verified"
+  },
+  "cropple": {
+    "url": "https://cropple.app/",
+    "checkedAt": "2026-11-14T01:24:23.213143+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://cropple.app/",
+    "state": "verified"
+  },
+  "guess-the-house": {
+    "url": "https://guessthe.house/",
+    "checkedAt": "2026-11-14T01:24:23.544059+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://guessthe.house/",
+    "state": "verified"
+  },
+  "guess-the-logo": {
+    "url": "https://guessthelogo.wtf/",
+    "checkedAt": "2026-11-14T01:24:24.331791+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://guessthelogo.wtf/",
+    "state": "verified"
+  },
+  "hexcodle": {
+    "url": "https://www.hexcodle.com/",
+    "checkedAt": "2026-11-14T01:24:24.851913+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.hexcodle.com/",
+    "state": "verified"
+  },
+  "how-expensive": {
+    "url": "https://howexpensive.roughly.is/",
+    "checkedAt": "2026-11-14T01:24:25.115869+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://howexpensive.roughly.is/",
+    "state": "verified"
+  },
+  "how-far-off": {
+    "url": "https://griffinley.com/margaret-brown/how-far-off.html",
+    "checkedAt": "2026-11-14T01:24:25.671082+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://griffinley.com/margaret-brown/how-far-off.html",
+    "state": "verified"
+  },
+  "meccha-chameleon": {
+    "url": "https://kmufti.com/chameleon/",
+    "checkedAt": "2026-11-14T01:24:26.303290+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://kmufti.com/chameleon/",
+    "state": "verified"
+  },
+  "picsey": {
+    "url": "https://picsey.io/",
+    "checkedAt": "2026-11-14T01:24:27.019845+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://picsey.io/",
+    "state": "verified"
+  },
+  "play-color-guesser": {
+    "url": "https://playcolorguesser.com/",
+    "checkedAt": "2026-11-14T01:24:27.036666+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://playcolorguesser.com/es",
+    "state": "verified"
+  },
+  "play-higher-lower": {
+    "url": "https://playhigherlower.com/daily",
+    "checkedAt": "2026-11-14T01:24:27.866856+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://playhigherlower.com/daily",
+    "state": "verified"
+  },
+  "prompt-duel": {
+    "url": "https://prompt-duel-delta.vercel.app/?daily",
+    "checkedAt": "2026-11-14T01:24:28.701528+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://prompt-duel-delta.vercel.app/?daily",
+    "state": "verified"
+  },
+  "scrandle": {
+    "url": "https://scrandle.com/",
+    "checkedAt": "2026-11-14T01:24:29.167925+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://scrandle.com/",
+    "state": "verified"
+  },
+  "sizeguess": {
+    "url": "https://sizeguess.com/",
+    "checkedAt": "2026-11-14T01:24:29.342895+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://sizeguess.com/",
+    "state": "verified"
+  },
+  "spot-the-differences": {
+    "url": "https://www.spot-differences.com/",
+    "checkedAt": "2026-11-14T01:24:30.575910+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.spot-differences.com/",
+    "state": "verified"
+  },
+  "metazooa": {
+    "url": "https://metazooa.com/",
+    "checkedAt": "2026-11-14T01:24:30.728560+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://metazooa.com/",
+    "state": "verified"
+  },
+  "birdie-game": {
+    "url": "https://birdiegame.net/",
+    "checkedAt": "2026-11-14T01:24:30.736623+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://birdiegame.net/",
+    "state": "verified"
+  },
+  "chemdle": {
+    "url": "https://www.chemdle.com/",
+    "checkedAt": "2026-11-14T01:24:32.114604+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.chemdle.com/",
+    "state": "verified"
+  },
+  "elemingle": {
+    "url": "https://elemingle.com/",
+    "checkedAt": "2026-11-14T01:24:32.333564+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://elemingle.com/",
+    "state": "verified"
+  },
+  "metaflora": {
+    "url": "https://flora.metazooa.com/",
+    "checkedAt": "2026-11-14T01:24:32.492670+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://flora.metazooa.com/",
+    "state": "verified"
+  },
+  "real-bird-fake-bird": {
+    "url": "https://realbirdfakebird.com/",
+    "checkedAt": "2026-11-14T01:24:33.245912+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://realbirdfakebird.com/",
+    "state": "verified"
+  },
+  "stardle": {
+    "url": "https://stardlegame.github.io/stardle/",
+    "checkedAt": "2026-11-14T01:24:33.468235+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://stardlegame.github.io/stardle/",
+    "state": "verified"
+  },
+  "putt-day": {
+    "url": "https://putt.day/play",
+    "checkedAt": "2026-11-14T01:24:33.966309+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://putt.day/play",
+    "state": "verified"
+  },
+  "daybrix": {
+    "url": "https://vole.wtf/daybrix",
+    "checkedAt": "2026-11-14T01:24:34.073181+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://vole.wtf/daybrix/",
+    "state": "verified"
+  },
+  "dungleon": {
+    "url": "https://www.dungleon.com/",
+    "checkedAt": "2026-11-14T01:24:34.776230+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.dungleon.com/",
+    "state": "verified"
+  },
+  "jigsy": {
+    "url": "https://jigsy.app/",
+    "checkedAt": "2026-11-14T01:24:34.872527+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://jigsy.app/",
+    "state": "verified"
+  },
+  "kinda-hard-golf": {
+    "url": "https://kindahardgolf.com/",
+    "checkedAt": "2026-11-14T01:24:35.567631+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://kindahardgolf.com/",
+    "state": "verified"
+  },
+  "minigolfle": {
+    "url": "https://minigolfle.com/",
+    "checkedAt": "2026-11-14T01:24:35.870639+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://minigolfle.com/",
+    "state": "verified"
+  },
+  "rogule": {
+    "url": "https://rogule.com/",
+    "checkedAt": "2026-11-14T01:24:36.249264+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://rogule.com/",
+    "state": "verified"
+  },
+  "squishy-billiards": {
+    "url": "https://squishybilliards.com/",
+    "checkedAt": "2026-11-14T01:24:36.359316+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://squishybilliards.com/",
+    "state": "verified"
+  },
+  "chess-com-daily-puzzle": {
+    "url": "https://www.chess.com/daily-chess-puzzle",
+    "checkedAt": "2026-11-14T01:24:36.843557+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.chess.com/daily",
+    "state": "verified"
+  },
+  "chessguessr": {
+    "url": "https://www.chessguessr.com/",
+    "checkedAt": "2026-11-14T01:24:37.138032+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.chessguessr.com/",
+    "state": "verified"
+  },
+  "chessle": {
+    "url": "https://jackli.gg/chessle/",
+    "checkedAt": "2026-11-14T01:24:37.631614+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://jackli.gg/chessle/",
+    "state": "verified"
+  },
+  "codenames-daily": {
+    "url": "https://codenames.game/daily/en",
+    "checkedAt": "2026-11-14T01:24:38.082035+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://codenames.game/daily/en",
+    "state": "verified"
+  },
+  "echo-chess": {
+    "url": "https://echochess.com/",
+    "checkedAt": "2026-11-14T01:24:38.533712+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://echochess.com/",
+    "state": "verified"
+  },
+  "lichess-daily-puzzle": {
+    "url": "https://lichess.org/training/daily",
+    "checkedAt": "2026-11-14T01:24:38.813218+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://lichess.org/training/daily",
+    "state": "verified"
+  },
+  "mahjong-handle": {
+    "url": "https://mahjong-handle.update.sh/",
+    "checkedAt": "2026-11-14T01:24:39.084731+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://mahjong-handle.update.sh/",
+    "state": "verified"
+  },
+  "pile-up-poker": {
+    "url": "https://www.puzzmo.com/play/pile-up-poker",
+    "checkedAt": "2026-11-14T01:24:39.514353+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.puzzmo.com/play/pile-up-poker",
+    "state": "verified"
+  },
+  "pokle": {
+    "url": "https://poklegame.com/",
+    "checkedAt": "2026-11-14T01:24:40.024552+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://poklegame.com/",
+    "state": "verified"
+  },
+  "really-bad-chess": {
+    "url": "https://www.puzzmo.com/play/really-bad-chess",
+    "checkedAt": "2026-11-14T01:24:40.941614+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.puzzmo.com/play/really-bad-chess",
+    "state": "verified"
+  },
+  "puzzmo": {
+    "url": "https://www.puzzmo.com/",
+    "checkedAt": "2026-11-14T01:24:42.265938+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.puzzmo.com/today/",
+    "state": "verified"
+  },
+  "brainilab-daily": {
+    "url": "https://brainilabgames.com/daily-quiz/",
+    "checkedAt": "2026-11-14T01:24:41.108808+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://brainilabgames.com/daily-quiz/",
+    "state": "verified"
+  },
+  "britannica-games": {
+    "url": "https://www.britannica.com/games",
+    "checkedAt": "2026-11-14T01:24:41.464480+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "coffee-first-games": {
+    "url": "https://coffeefirst.games/",
+    "checkedAt": "2026-11-14T01:24:42.265938+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://coffeefirst.games/",
+    "state": "verified"
+  },
+  "gamebunny": {
+    "url": "https://gamebunny.app/",
+    "checkedAt": "2026-11-14T01:24:42.583842+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://gamebunny.app/",
+    "state": "verified"
+  },
+  "grid-puzzles": {
+    "url": "https://gridpuzzles.app/",
+    "checkedAt": "2026-11-14T01:24:42.761610+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://gridpuzzles.app/",
+    "state": "verified"
+  },
+  "lex-games": {
+    "url": "https://lex.games/",
+    "checkedAt": "2026-11-14T01:24:43.833347+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://lex.games/",
+    "state": "verified"
+  },
+  "linkedin-games": {
+    "url": "https://www.linkedin.com/games/",
+    "checkedAt": "2026-11-14T01:24:44.152416+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.linkedin.com/games/",
+    "state": "verified"
+  },
+  "merriam-webster-games": {
+    "url": "https://www.merriam-webster.com/games",
+    "checkedAt": "2026-11-14T01:24:44.306920+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "netflix-puzzled": {
+    "url": "https://www.netflix.com/tudum/puzzled",
+    "checkedAt": "2026-11-14T01:24:44.443365+00:00",
+    "method": "HEAD",
+    "httpStatus": 403,
+    "state": "unverified",
+    "reason": "HTTP 403"
+  },
+  "the-new-yorker-puzzles-games": {
+    "url": "https://www.newyorker.com/puzzles-and-games-dept",
+    "checkedAt": "2026-11-14T01:24:45.299038+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.newyorker.com/crossword-puzzles-and-games",
+    "state": "verified"
+  },
+  "nibble-games": {
+    "url": "https://nibble.games/",
+    "checkedAt": "2026-11-14T01:24:45.491719+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://nibble.games/",
+    "state": "verified"
+  },
+  "nyt-games": {
+    "url": "https://www.nytimes.com/crosswords",
+    "checkedAt": "2026-11-14T01:24:45.551823+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.nytimes.com/crosswords",
+    "state": "verified"
+  },
+  "puzzmallow": {
+    "url": "https://puzzmallow.com/",
+    "checkedAt": "2026-11-14T01:24:45.716011+00:00",
+    "method": "GET-range",
+    "httpStatus": 200,
+    "finalUrl": "https://puzzmallow.com/",
+    "state": "verified"
+  },
+  "simple-games-today": {
+    "url": "https://simplegamestoday.com/",
+    "checkedAt": "2026-11-14T01:24:46.861705+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://simplegamestoday.com/",
+    "state": "verified"
+  },
+  "ted-games": {
+    "url": "https://www.ted.com/games",
+    "checkedAt": "2026-11-14T01:24:46.986039+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://www.ted.com/games",
+    "state": "verified"
+  },
+  "thinky-dailies": {
+    "url": "https://thinkygames.com/dailies/today/",
+    "checkedAt": "2026-11-14T01:24:47.347913+00:00",
+    "method": "HEAD",
+    "httpStatus": 200,
+    "finalUrl": "https://thinkygames.com/dailies/today/",
+    "state": "verified"
+  },
+  "washington-post-games": {
+    "url": "https://www.washingtonpost.com/games/",
+    "checkedAt": "2026-11-14T01:24:48.350522+00:00",
+    "method": "HEAD",
+    "state": "excluded",
+    "reason": "TimeoutError: The read operation timed out"
+  }
+}

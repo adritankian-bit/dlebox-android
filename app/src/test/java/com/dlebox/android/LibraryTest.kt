@@ -29,4 +29,48 @@ class LibraryTest {
         repeat(250) { saved=saved.opened(game.copy(id="game-$it"),it.toLong()) }
         assertEquals(200,saved.recent.size)
     }
+    @Test fun corruptCacheFallsBackToBundled() { assertEquals(1,chooseCatalog(raw(),"not json")!!.version) }
+    @Test fun emptyRemoteCannotReplaceValidCatalog() {
+        val empty=CatalogCodec.json.encodeToString(Catalog(1,9,emptyList()))
+        assertEquals(1,chooseCatalog(raw(),empty)!!.version)
+    }
+    @Test fun highestValidCatalogWins() { assertEquals(2,chooseCatalog(raw(),CatalogCodec.json.encodeToString(Catalog(1,2,listOf(game))))!!.version) }
+    @Test fun missingOrCorruptCatalogIsRecoverable() { assertNull(chooseCatalog(null,"{}")) }
+    @Test fun oldSchemaAndUnknownFieldsAreCompatible() {
+        val old=raw().replace("\"version\": 1","\"version\": 1, \"futureField\": true")
+        assertEquals(game.id,CatalogCodec.decode(old).games.first().id)
+    }
+    @Test fun sortingAndRandomRemainStable() {
+        val b=game.copy(id="beta",name="Beta",addedAt="2026-11-13")
+        val a=game.copy(id="alpha",name="Álpha")
+        val list=listOf(b,game,a)
+        assertEquals("alpha",orderGames(list,GameOrder.NAME,emptyMap(),1).first().id)
+        assertEquals("beta",orderGames(list,GameOrder.PLAYED,mapOf("beta" to 9),1).first().id)
+        assertEquals("alpha",orderGames(list,GameOrder.NEWEST,emptyMap(),1).first().id)
+        assertEquals(orderGames(list,GameOrder.RANDOM,emptyMap(),5),orderGames(list,GameOrder.RANDOM,emptyMap(),5))
+    }
+    @Test fun surpriseExcludesBrokenAndUnsafeLinks() {
+        assertEquals(listOf(game),surpriseCandidates(listOf(game,game.copy(id="broken",linkStatus="broken"),game.copy(id="unsafe",gameUrl="javascript:alert(1)"))))
+    }
+    @Test fun clearingHistoryKeepsFavorites() {
+        val saved=SavedLibrary().toggle(game).opened(game,10).clearRecent()
+        assertTrue(saved.recent.isEmpty());assertTrue(game.id in saved.favorites)
+    }
+    @Test fun failedBrowserLaunchNeverRecordsHistory() {
+        var recorded=false
+        assertFalse(recordSuccessfulLaunch(game,{false},{recorded=true}))
+        assertFalse(recorded)
+        assertTrue(recordSuccessfulLaunch(game,{true},{recorded=true}))
+        assertTrue(recorded)
+    }
+    @Test fun legacyFavoritesSurviveNewCatalogMetadata() {
+        val oldJson="""{"favorites":["waffle"],"recent":{"waffle":123},"snapshots":{},"theme":"dark"}"""
+        val old=CatalogCodec.json.decodeFromString<SavedLibrary>(oldJson)
+        assertTrue(game.id in old.favorites);assertEquals(123L,old.recent[game.id]);assertEquals("dark",old.theme)
+    }
+    @Test fun relativeDatesHandleFutureAndYesterday() {
+        assertEquals("Ahora mismo",relativeOpened(2000,1000))
+        assertEquals("Hace 2 min",relativeOpened(0,120000))
+        assertEquals("Ayer",relativeOpened(0,86400000))
+    }
 }

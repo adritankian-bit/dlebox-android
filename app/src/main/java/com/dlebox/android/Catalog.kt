@@ -10,7 +10,10 @@ import java.text.Normalizer
     val gameUrl: String, val sourceUrl: String? = null, val thumbnailUrl: String? = null,
     val thumbnailType: String = "generated", val thumbnailSource: String = "DleBox: diseño original",
     val thumbnailPermission: String? = null, val language: String? = null,
-    val addedAt: String, val linkStatus: String, val verifiedAt: String? = null
+    val addedAt: String, val linkStatus: String, val verifiedAt: String? = null,
+    val catalogSourceUrl: String? = null, val sourceRecordId: String? = null,
+    val sourceLicense: String? = null, val sourceRevision: String? = null,
+    val verificationMethod: String? = null, val httpStatus: Int? = null
 )
 @Serializable data class Catalog(val schemaVersion: Int, val version: Int, val games: List<Game>)
 object CatalogCodec {
@@ -41,6 +44,17 @@ object CatalogCodec {
         return "${u.scheme.lowercase()}://${u.host?.lowercase()}${u.path.orEmpty().trimEnd('/')}" + (u.query?.let { "?$it" } ?: "")
     }
 }
+fun chooseCatalog(bundledRaw: String?, cachedRaw: String?): Catalog? =
+    listOfNotNull(bundledRaw, cachedRaw).mapNotNull { runCatching { CatalogCodec.decode(it) }.getOrNull() }.maxByOrNull { it.version }
+
+enum class GameOrder(val title: String) { NAME("Nombre"), NEWEST("Incorporación reciente"), PLAYED("Últimos jugados"), RANDOM("Aleatorio") }
+fun orderGames(games: List<Game>, order: GameOrder, recent: Map<String, Long>, seed: Int): List<Game> = when(order) {
+    GameOrder.NAME -> games.sortedBy { it.name.searchKey() }
+    GameOrder.NEWEST -> games.sortedWith(compareByDescending<Game> { it.addedAt }.thenBy { it.name.searchKey() })
+    GameOrder.PLAYED -> games.sortedWith(compareByDescending<Game> { recent[it.id] ?: 0L }.thenBy { it.name.searchKey() })
+    GameOrder.RANDOM -> games.shuffled(kotlin.random.Random(seed))
+}
+fun surpriseCandidates(games: List<Game>) = games.filter { it.linkStatus != "broken" && CatalogCodec.safeUrl(it.gameUrl) }
 fun String.searchKey(): String = Normalizer.normalize(lowercase(java.util.Locale.ROOT), Normalizer.Form.NFD).replace(Regex("\\p{M}"), "")
 fun filterGames(games: List<Game>, query: String, category: String): List<Game> {
     val q = query.trim().searchKey()
@@ -54,5 +68,6 @@ fun filterGames(games: List<Game>, query: String, category: String): List<Game> 
     fun toggle(game: Game) = copy(favorites = if (game.id in favorites) favorites - game.id else favorites + game.id, snapshots = snapshots + (game.id to game))
     fun opened(game: Game, at: Long) = copy(recent = (recent + (game.id to at)).entries.sortedByDescending { it.value }.take(200).associate { it.toPair() }, snapshots = snapshots + (game.id to game))
     fun removeRecent(id: String) = copy(recent = recent - id)
+    fun clearRecent() = copy(recent = emptyMap())
     fun orderedRecent() = recent.entries.sortedByDescending { it.value }.map { it.key }
 }

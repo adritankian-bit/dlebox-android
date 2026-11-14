@@ -25,5 +25,23 @@ class CatalogTests(unittest.TestCase):
     def test_verification_date(self):
         self.c['games'][0]['verifiedAt']=None
         with self.assertRaises(AssertionError):validate(self.c)
+    def test_legacy_ids_preserved(self):
+        ids={g['id'] for g in self.c['games']}
+        self.assertTrue({'wordle','waffle','globle','murdle','timeguessr','filmlink'} <= ids)
+    def test_no_duplicate_names(self):
+        names=[g['name'].strip().casefold() for g in self.c['games']]
+        self.assertEqual(len(names),len(set(names)))
+    def test_import_is_reproducible_offline(self):
+        import subprocess,sys
+        path=Path(__file__).resolve().parents[1]/'catalog/games.json'
+        before=path.read_bytes()
+        subprocess.run([sys.executable,str(Path(__file__).with_name('import_cc0.py'))],check=True,capture_output=True)
+        self.assertEqual(before,path.read_bytes())
+    def test_provenance_is_explicit(self):
+        for g in self.c['games']:
+            self.assertTrue(g.get('sourceUrl'))
+            if g.get('catalogSourceUrl'):
+                self.assertEqual('CC0-1.0',g['sourceLicense'])
+                self.assertEqual(40,len(g['sourceRevision']))
 
 if __name__=='__main__': unittest.main()
