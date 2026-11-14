@@ -39,7 +39,7 @@ class DeviceTest {
         ui.onNodeWithContentDescription("Eliminar Waffle del historial").performClick()
         ui.waitUntil(5000) { ui.onAllNodesWithContentDescription("Eliminar Waffle del historial").fetchSemanticsNodes().isEmpty() }
     }
-    @Test fun dataStoreSurvivesReopening() = runBlocking {
+    @Test fun dataStoreSurvivesReopening(): Unit = runBlocking {
         val context=InstrumentationRegistry.getInstrumentation().targetContext
         val file=context.preferencesDataStoreFile("persistence-test-${System.nanoTime()}")
         val key=stringPreferencesKey("saved")
@@ -55,5 +55,6 @@ class DeviceTest {
         assertEquals(original,restored)
         nextJob.cancelAndJoin()
         file.delete()
+        Unit
     }
 }

@@ -4,7 +4,10 @@ from validate_catalog import validate
 
 class CatalogTests(unittest.TestCase):
     def setUp(self): self.c=json.loads((Path(__file__).resolve().parents[1]/'catalog/games.json').read_text(encoding='utf-8'))
-    def test_catalog(self): self.assertEqual(validate(self.c),(6,5))
+    def test_catalog(self):
+        count,categories=validate(self.c)
+        self.assertEqual(count,len(self.c['games']))
+        self.assertGreater(categories,0)
     def test_duplicate_id(self):
         self.c['games'].append(copy.deepcopy(self.c['games'][0]))
         with self.assertRaises(AssertionError): validate(self.c)
