@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.core.view.WindowCompat
 import coil.compose.SubcomposeAsyncImage
 import java.text.DateFormat
 import java.util.Date
@@ -55,6 +56,14 @@ class MainActivity : ComponentActivity() {
         else lightColorScheme(primary = Color(0xFF396E34), background = Color.White, surface = Color(0xFFF6F6F6), secondaryContainer = Color(0xFFE5EFDF), onSurface = Color(0xFF222222))
     MaterialTheme(colorScheme = colors) {
         val context = LocalContext.current
+        SideEffect {
+            (context as? android.app.Activity)?.let { activity ->
+                WindowCompat.getInsetsController(activity.window, activity.window.decorView).apply {
+                    isAppearanceLightStatusBars = !dark
+                    isAppearanceLightNavigationBars = !dark
+                }
+            }
+        }
         var tab by rememberSaveable { mutableIntStateOf(0) }
         var query by rememberSaveable { mutableStateOf("") }
         var category by rememberSaveable { mutableStateOf("Todos") }

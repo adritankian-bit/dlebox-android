@@ -21,6 +21,8 @@ El workflow manual `Android device tests` prueba interfaz y reapertura real de D
 
 Las dos pruebas instrumentadas se ejecutaron y aprobaron (0 fallos, 0 errores): búsqueda/filtros/favoritos/recientes y persistencia después de cerrar y reabrir DataStore. El primer intento de captura posterior falló porque el ejecutor desinstala la aplicación al terminar las pruebas; el workflow la reinstala ahora antes de capturar.
 
+La ejecución corregida completó las dos pruebas y produjo capturas reales en claro y oscuro. La inspección visual detectó poco contraste en los iconos de la barra de estado oscura; se ajusta su apariencia al tema de DleBox.
+
 ## Alcance y limitaciones
 
 No se dispone de un Samsung físico conectado. No se ha certificado una partida completa en cada juego ni todos los navegadores o versiones de Android. HTTP 200 acredita respuesta de la página en una fecha, no que toda su lógica esté libre de errores.
