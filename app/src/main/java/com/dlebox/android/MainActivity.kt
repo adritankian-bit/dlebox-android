@@ -2,7 +2,6 @@ package com.dlebox.android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
@@ -33,15 +32,20 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState); setContent { DleBox() } }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent { DleBox(window=window) }
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
-@Composable fun DleBox(vm: LibraryViewModel = viewModel()) {
+@Composable fun DleBox(window: android.view.Window? = null, vm: LibraryViewModel = viewModel()) {
     val library by vm.saved.collectAsStateWithLifecycle()
     val games by vm.games.collectAsStateWithLifecycle()
     val updating by vm.refreshing.collectAsStateWithLifecycle()
@@ -53,10 +57,16 @@ class MainActivity : ComponentActivity() {
     MaterialTheme(colorScheme=colors) {
         val context=LocalContext.current
         val focus=LocalFocusManager.current
-        SideEffect { (context as? ComponentActivity)?.let { activity ->
-            val transparent=android.graphics.Color.TRANSPARENT
-            val bars=if(dark)SystemBarStyle.dark(transparent)else SystemBarStyle.light(transparent,transparent)
-            activity.enableEdgeToEdge(statusBarStyle=bars,navigationBarStyle=bars)
+        SideEffect { window?.let { target ->
+            target.setBackgroundDrawable(android.graphics.drawable.ColorDrawable(colors.background.toArgb()))
+            target.decorView.setBackgroundColor(colors.background.toArgb())
+            WindowCompat.getInsetsController(target,target.decorView).apply {
+                isAppearanceLightStatusBars=!dark;isAppearanceLightNavigationBars=!dark
+            }
+            if(android.os.Build.VERSION.SDK_INT>=29) {
+                target.isNavigationBarContrastEnforced=false
+                target.isStatusBarContrastEnforced=false
+            }
         } }
         var tab by rememberSaveable { mutableIntStateOf(0) }
         var query by rememberSaveable { mutableStateOf("") }

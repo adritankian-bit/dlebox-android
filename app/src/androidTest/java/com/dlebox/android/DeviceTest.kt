@@ -104,7 +104,11 @@ class DeviceTest {
         assertNotEquals(app,device.currentPackageName)
         assertTrue("El navegador debe llegar al destino original",device.wait(Until.hasObject(By.textContains("wafflegame.net")),20000))
         shot("09-juego-navegador",false)
-        repeat(4) { if(device.currentPackageName!=app) { device.pressBack();device.waitForIdle(2000) } }
+        for(attempt in 0..3) {
+            if(device.hasObject(By.pkg(app))) break
+            device.pressBack()
+            if(device.wait(Until.hasObject(By.pkg(app)),5000)) break
+        }
         ui.waitUntil(15000) { ui.onAllNodesWithTag("game-waffle").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithTag("search").assertTextContains("Waffle")
         ui.onNodeWithTag("game-waffle").assertIsDisplayed()
