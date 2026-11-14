@@ -1,0 +1,43 @@
+name: Android APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Validar catálogo
+        run: |
+          python3 scripts/validate_catalog.py
+          python3 -m unittest discover -s scripts -p 'test_*.py' -v
+      - name: Compilar y probar
+        run: |
+          chmod +x gradlew
+          ./gradlew testDebugUnitTest lintDebug assembleDebug --no-daemon
+      - name: Preparar APK de prueba
+        run: cp app/build/outputs/apk/debug/app-debug.apk DleBox-v1.0.0.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DleBox-debug
+          path: DleBox-v1.0.0.apk
+      - name: Publicar versión de prueba
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "${GITHUB_REF_NAME}" = "v1.0.0"
+          gh release create "$GITHUB_REF_NAME" DleBox-v1.0.0.apk --title "DleBox v1.0.0 · prueba" --notes-file docs/RELEASE-v1.0.0.md --prerelease --verify-tag
