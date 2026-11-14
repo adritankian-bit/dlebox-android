@@ -69,7 +69,11 @@ def candidates():
         if ident in ids:ident+='-'+hashlib.sha256(dest.encode()).hexdigest()[:8]
         ids.add(ident)
         by_url[dest]=dict(id=ident,name=re.sub(r'\s+',' ',row['name']).strip(),description=row['description'].strip(),category=CATEGORIES[row['category']],gameUrl=row['url'],sourceUrl=source_url,catalogSourceUrl=source_url,sourceRecordId=row['id'],sourceLicense='CC0-1.0',sourceRevision=manifest['revision'],thumbnailUrl=None,thumbnailType='generated',thumbnailSource='DleBox: composición geométrica original, no es una captura',thumbnailPermission=None,language=None,addedAt='2026-11-14',linkStatus='unverified',verifiedAt=None)
-    return list(by_url.values())
+    by_id={g['id']:g for g in by_url.values()}
+    manual_file=SOURCES/'manual-games.json'
+    if manual_file.exists():
+        for g in json.loads(manual_file.read_text(encoding='utf-8')):by_id[g['id']]=g
+    return list(by_id.values())
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--fetch-source',action='store_true');parser.add_argument('--verify',action='store_true');args=parser.parse_args()
@@ -84,23 +88,28 @@ def main():
     checks=json.loads(report_file.read_text(encoding='utf-8'))
     manifest=json.loads((SOURCES/'manifest.json').read_text(encoding='utf-8'))
     selected=[]
+    manual_file=SOURCES/'manual-games.json'
+    manual_ids={g['id'] for g in json.loads(manual_file.read_text(encoding='utf-8'))} if manual_file.exists() else set()
     destinations={}
     duplicates=[]
     for g in games:
         check_result=checks.get(g['id'],{})
+        if check_result.get('url')!=g['gameUrl']:check_result={}
         if check_result.get('state')=='excluded':continue
-        g['addedAt']=manifest.get('addedDates',{}).get(g['id'],manifest.get('importedAt',g['addedAt']))
+        if g['id'] not in manual_ids:g['addedAt']=manifest.get('addedDates',{}).get(g['id'],manifest.get('importedAt',g['addedAt']))
         destination=canonical(check_result.get('finalUrl',g['gameUrl']))
         if destination in destinations:
             duplicates.append({'removedId':g['id'],'keptId':destinations[destination],'finalUrl':destination})
             continue
         destinations[destination]=g['id']
-        g['linkStatus']=check_result.get('state','unverified')
-        g['verifiedAt']=check_result['checkedAt'][:10] if g['linkStatus']=='verified' else None
-        g['verificationMethod']=check_result.get('method')
-        g['httpStatus']=check_result.get('httpStatus')
+        if check_result:
+            g['linkStatus']=check_result.get('state','unverified')
+            g['verifiedAt']=check_result['checkedAt'][:10] if g['linkStatus']=='verified' else None
+            g['verificationMethod']=check_result.get('method')
+            g['httpStatus']=check_result.get('httpStatus')
         selected.append(g)
-    catalog={'schemaVersion':1,'version':manifest.get('catalogVersion',2),'games':selected}
+    previous_version=json.loads((ROOT/'catalog/games.json').read_text(encoding='utf-8'))['version']
+    catalog={'schemaVersion':1,'version':max(previous_version,manifest.get('catalogVersion',2)),'games':selected}
     validate(catalog)
     temporary=ROOT/'catalog/games.tmp'
     temporary.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

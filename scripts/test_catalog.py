@@ -43,5 +43,20 @@ class CatalogTests(unittest.TestCase):
             if g.get('catalogSourceUrl'):
                 self.assertEqual('CC0-1.0',g['sourceLicense'])
                 self.assertEqual(40,len(g['sourceRevision']))
+    def test_manual_entries_survive_source_rebuild(self):
+        import tempfile,shutil
+        import import_cc0
+        root=Path(__file__).resolve().parents[1]
+        previous_root,previous_sources=import_cc0.ROOT,import_cc0.SOURCES
+        with tempfile.TemporaryDirectory() as directory:
+            target=Path(directory)
+            shutil.copytree(root/'catalog',target/'catalog')
+            manual=copy.deepcopy(self.c['games'][0]);manual['description']='Anotación manual de prueba'
+            (target/'catalog/sources/manual-games.json').write_text(json.dumps([manual]),encoding='utf-8')
+            try:
+                import_cc0.ROOT=target;import_cc0.SOURCES=target/'catalog/sources'
+                rebuilt=import_cc0.candidates()
+                self.assertEqual('Anotación manual de prueba',next(g['description'] for g in rebuilt if g['id']==manual['id']))
+            finally:import_cc0.ROOT,import_cc0.SOURCES=previous_root,previous_sources
 
 if __name__=='__main__': unittest.main()

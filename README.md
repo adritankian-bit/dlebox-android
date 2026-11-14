@@ -52,7 +52,7 @@ python scripts/import_cc0.py --fetch-source --verify
 
 La segunda opción incrementa la versión del catálogo. Consulta la fuente fijada, excluye entradas Reddit, preserva IDs, normaliza categorías al español, elimina duplicados y comprueba destinos con máximo cuatro trabajadores y una solicitud por segundo por host. No copia imágenes ni rastrea Listdle.
 
-El workflow manual **Actualizar catálogo CC0** ejecuta la importación y las pruebas y solo publica datos validados. Para añadir un lote revisado manualmente: `python scripts/import_manual.py entradas.json`. Usa IDs estables, HTTPS, procedencia y estado de verificación honesto. Las imágenes externas necesitan evidencia en `thumbnailPermission`; sin autorización usa `generated` y URL nula.
+El workflow manual **Actualizar catálogo CC0** ejecuta la importación y las pruebas y solo publica datos validados. Para añadir un lote revisado manualmente: `python scripts/import_manual.py entradas.json`. Se conserva en `catalog/sources/manual-games.json` para que una actualización de la fuente no lo elimine. Usa IDs estables, HTTPS, procedencia y estado de verificación honesto. Las imágenes externas necesitan evidencia en `thumbnailPermission`; sin autorización usa `generated` y URL nula.
 
 ## Compilar y publicar
 
