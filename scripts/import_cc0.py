@@ -27,8 +27,8 @@ def fetch_source():
         (SOURCES/local).write_bytes(raw)
     license_text=(SOURCES/'CC0-1.0.txt').read_text(encoding='utf-8')
     if 'CC0 1.0 Universal' not in license_text: raise ValueError('Licencia inesperada')
-    previous=json.loads((ROOT/'catalog/games.json').read_text(encoding='utf-8'))['version']
-    (SOURCES/'manifest.json').write_text(json.dumps({'repository':f'https://github.com/{REPO}','revision':revision,'license':'CC0-1.0','catalogVersion':previous+1,'snapshotSha256':hashlib.sha256((SOURCES/'awesome-daily-minigames.json').read_bytes()).hexdigest()},indent=2)+'\n',encoding='utf-8')
+    previous=json.loads((ROOT/'catalog/games.json').read_text(encoding='utf-8'))
+    (SOURCES/'manifest.json').write_text(json.dumps({'repository':f'https://github.com/{REPO}','revision':revision,'license':'CC0-1.0','catalogVersion':previous['version']+1,'importedAt':datetime.datetime.now(datetime.timezone.utc).date().isoformat(),'addedDates':{g['id']:g['addedAt'] for g in previous['games']},'snapshotSha256':hashlib.sha256((SOURCES/'awesome-daily-minigames.json').read_bytes()).hexdigest()},indent=2)+'\n',encoding='utf-8')
 
 host_locks={}
 def check(g):
@@ -52,8 +52,11 @@ def check(g):
         return g['id'],result
 
 def candidates():
-    source=json.loads((SOURCES/'awesome-daily-minigames.json').read_text(encoding='utf-8'))
     manifest=json.loads((SOURCES/'manifest.json').read_text(encoding='utf-8'))
+    raw=(SOURCES/'awesome-daily-minigames.json').read_bytes()
+    if hashlib.sha256(raw).hexdigest()!=manifest['snapshotSha256']:raise ValueError('La instantánea no coincide con su SHA-256')
+    if 'CC0 1.0 Universal' not in (SOURCES/'CC0-1.0.txt').read_text(encoding='utf-8'):raise ValueError('Licencia inesperada')
+    source=json.loads(raw)
     legacy=json.loads((SOURCES/'legacy-v1.json').read_text(encoding='utf-8'))['games']
     by_url={canonical(g['gameUrl']):dict(g) for g in legacy}
     ids={g['id'] for g in legacy}
@@ -79,12 +82,14 @@ def main():
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:checks=dict(executor.map(check,games))
         report_file.write_text(json.dumps(checks,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     checks=json.loads(report_file.read_text(encoding='utf-8'))
+    manifest=json.loads((SOURCES/'manifest.json').read_text(encoding='utf-8'))
     selected=[]
     destinations={}
     duplicates=[]
     for g in games:
         check_result=checks.get(g['id'],{})
         if check_result.get('state')=='excluded':continue
+        g['addedAt']=manifest.get('addedDates',{}).get(g['id'],manifest.get('importedAt',g['addedAt']))
         destination=canonical(check_result.get('finalUrl',g['gameUrl']))
         if destination in destinations:
             duplicates.append({'removedId':g['id'],'keptId':destinations[destination],'finalUrl':destination})
@@ -95,7 +100,6 @@ def main():
         g['verificationMethod']=check_result.get('method')
         g['httpStatus']=check_result.get('httpStatus')
         selected.append(g)
-    manifest=json.loads((SOURCES/'manifest.json').read_text(encoding='utf-8'))
     catalog={'schemaVersion':1,'version':manifest.get('catalogVersion',2),'games':selected}
     validate(catalog)
     temporary=ROOT/'catalog/games.tmp'

@@ -1,0 +1,4 @@
+catalog/sources/awesome-daily-minigames.json -text
+catalog/sources/CC0-1.0.txt -text
+*.sh text eol=lf
+gradlew text eol=lf

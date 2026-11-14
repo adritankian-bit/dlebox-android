@@ -2,6 +2,8 @@ package com.dlebox.android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.*
@@ -31,7 +33,6 @@ import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 
@@ -52,10 +53,10 @@ class MainActivity : ComponentActivity() {
     MaterialTheme(colorScheme=colors) {
         val context=LocalContext.current
         val focus=LocalFocusManager.current
-        SideEffect { (context as? android.app.Activity)?.let { activity ->
-            WindowCompat.getInsetsController(activity.window,activity.window.decorView).apply {
-                isAppearanceLightStatusBars=!dark;isAppearanceLightNavigationBars=!dark
-            }
+        SideEffect { (context as? ComponentActivity)?.let { activity ->
+            val transparent=android.graphics.Color.TRANSPARENT
+            val bars=if(dark)SystemBarStyle.dark(transparent)else SystemBarStyle.light(transparent,transparent)
+            activity.enableEdgeToEdge(statusBarStyle=bars,navigationBarStyle=bars)
         } }
         var tab by rememberSaveable { mutableIntStateOf(0) }
         var query by rememberSaveable { mutableStateOf("") }
@@ -109,10 +110,10 @@ class MainActivity : ComponentActivity() {
                         modifier=Modifier.fillMaxWidth().padding(horizontal=20.dp).padding(top=2.dp).testTag("search"))
                     val categories=remember(games) { listOf("Todos")+games.map { it.category }.distinct().sortedBy { it.searchKey() } }
                     LazyRow(state=categoryScroll,modifier=Modifier.testTag("categories"),contentPadding=PaddingValues(horizontal=20.dp),horizontalArrangement=Arrangement.spacedBy(6.dp)) {
-                        items(categories,key={it}) { cat -> FilterChip(selected=category==cat,onClick={category=cat;focus.clearFocus()},label={Text(cat,style=MaterialTheme.typography.labelLarge)},modifier=Modifier.heightIn(min=48.dp)) }
+                        items(categories,key={it}) { cat -> FilterChip(selected=category==cat,onClick={category=cat;focus.clearFocus()},label={Text(cat,style=MaterialTheme.typography.labelLarge)}) }
                     }
                     Row(Modifier.fillMaxWidth().padding(start=20.dp,end=8.dp),verticalAlignment=Alignment.CenterVertically) {
-                        Text("${visible.size} juegos",style=MaterialTheme.typography.labelLarge,color=colors.onSurfaceVariant,modifier=Modifier.weight(1f).testTag("result-count"))
+                        Text("${visible.size} ${if(visible.size==1)"juego" else "juegos"}",style=MaterialTheme.typography.labelLarge,color=colors.onSurfaceVariant,maxLines=1,overflow=androidx.compose.ui.text.style.TextOverflow.Ellipsis,modifier=Modifier.weight(1f).testTag("result-count"))
                         TextButton(onClick={surprise.randomOrNull()?.let { play(it) }},enabled=surprise.isNotEmpty(),contentPadding=PaddingValues(horizontal=8.dp)) { Icon(Icons.Outlined.Shuffle,null,Modifier.size(18.dp));Spacer(Modifier.width(5.dp));Text("Sorpréndeme",style=MaterialTheme.typography.labelLarge) }
                         Box {
                             IconButton(onClick={showOrder=true}) { Icon(Icons.Outlined.Sort,"Ordenar juegos",Modifier.size(22.dp)) }

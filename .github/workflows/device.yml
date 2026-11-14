@@ -27,9 +27,7 @@ jobs:
           profile: pixel_2
           disable-animations: true
           script: |
-            chmod +x gradlew
-            ./gradlew connectedDebugAndroidTest --no-daemon
-            adb pull /sdcard/Download/dlebox-check visual-check
+            bash scripts/run_device_tests.sh
       - uses: actions/upload-artifact@v4
         if: always()
         with:

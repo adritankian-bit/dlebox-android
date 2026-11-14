@@ -22,6 +22,7 @@ class DeviceTest {
     private fun shot(name: String, compose: Boolean=true) {
         if(compose) ui.waitForIdle()
         device.waitForIdle(2000)
+        android.os.SystemClock.sleep(450)
         device.executeShellCommand("mkdir -p /sdcard/Download/dlebox-check")
         device.executeShellCommand("screencap -p /sdcard/Download/dlebox-check/$name.png")
     }
@@ -96,11 +97,12 @@ class DeviceTest {
         ui.onNodeWithTag("game-waffle").performClick()
         val app=InstrumentationRegistry.getInstrumentation().targetContext.packageName
         assertTrue("Android debe mostrar un navegador",device.wait(Until.hasObject(By.pkg("com.android.chrome")),15000))
-        repeat(4) {
-            val consent=device.findObject(By.text(java.util.regex.Pattern.compile("(?i)(Use without an account|Continue without an account|Accept & continue|No thanks|Not now|Got it)")))
+        repeat(6) {
+            val consent=device.wait(Until.findObject(By.text(java.util.regex.Pattern.compile("(?i)(Use without an account|Continue without an account|Accept & continue|No thanks|Not now|Got it)"))),4000)
             if(consent!=null) { consent.click();device.waitForIdle(3000) }
         }
         assertNotEquals(app,device.currentPackageName)
+        assertTrue("El navegador debe llegar al destino original",device.wait(Until.hasObject(By.textContains("wafflegame.net")),20000))
         shot("09-juego-navegador",false)
         repeat(4) { if(device.currentPackageName!=app) { device.pressBack();device.waitForIdle(2000) } }
         ui.waitUntil(15000) { ui.onAllNodesWithTag("game-waffle").fetchSemanticsNodes().isNotEmpty() }

@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
@@ -64,7 +65,8 @@ private fun style(category: String): ArtStyle = when(category) {
     val initials = game.name.split(Regex("[^\\p{L}\\p{N}]+")).filter { it.isNotBlank() }.let {
         if(it.size > 1) it.take(2).joinToString("") { word -> word.take(1) } else game.name.take(2)
     }.uppercase(java.util.Locale.ROOT)
-    Box(modifier.background(paper).semantics { contentDescription = "Ilustración original de ${game.name}, no es una captura" }) {
+    BoxWithConstraints(modifier.clipToBounds().background(paper).semantics { contentDescription = "Ilustración original de ${game.name}, no es una captura" }) {
+        val compact=maxWidth < 100.dp
         Canvas(Modifier.fillMaxSize()) {
             val w=size.width; val h=size.height
             val shift=(seed % 5)*w*.025f
@@ -109,7 +111,7 @@ private fun style(category: String): ArtStyle = when(category) {
             }
             drawRect(art.color,Offset(0f,0f),Size(4.dp.toPx(),h))
         }
-        Icon(art.icon, null, tint=art.color.copy(alpha=.72f), modifier=Modifier.align(Alignment.CenterEnd).padding(end=((seed%3)*5+14).dp).size(54.dp))
-        Text(initials, color=ink, fontWeight=FontWeight.ExtraBold, fontSize=34.sp, modifier=Modifier.align(Alignment.CenterStart).padding(start=18.dp))
+        Icon(art.icon, null, tint=art.color.copy(alpha=.72f), modifier=Modifier.align(Alignment.CenterEnd).padding(end=if(compact)4.dp else ((seed%3)*5+14).dp).size(if(compact)26.dp else 54.dp))
+        Text(if(compact)initials.take(1) else initials, color=ink, fontWeight=FontWeight.ExtraBold, fontSize=if(compact)22.sp else 34.sp,maxLines=1,softWrap=false, modifier=Modifier.align(Alignment.CenterStart).padding(start=if(compact)8.dp else 18.dp))
     }
 }
