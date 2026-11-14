@@ -12,7 +12,17 @@
 
 ## Comprobaciones automatizadas
 
-Los resultados definitivos deben contrastarse con las ejecuciones de GitHub Actions y sus informes XML. El proyecto contiene pruebas Python de validación, procedencia, duplicados, preservación de IDs y reconstrucción offline; pruebas Kotlin de búsqueda, ordenación, sorpresa, historial, favoritos, compatibilidad antigua y recuperación de catálogos corruptos/vacíos; y pruebas API 35 de persistencia e interfaz, con recorrido visual y navegador.
+Resultado final: **34 pruebas aprobadas: 21 Kotlin, 11 Python y 2 instrumentadas en Android 15/API 35**, sin fallos ni errores. Compilan la aplicación y la APK de pruebas. Android lint termina sin errores; conserva advertencias no bloqueantes de versiones nuevas de dependencias y recomendaciones de API.
+
+- [Compilación y pruebas de la revisión verificada](https://github.com/adritankian-bit/dlebox-android/actions/runs/43544181748).
+- [Recorrido API 35 aprobado y artifact de capturas/informes](https://github.com/adritankian-bit/dlebox-android/actions/runs/43544188282).
+- Las pruebas Python verifican validación, procedencia, duplicados, preservación de IDs, reconstrucción offline y conservación de incorporaciones manuales.
+- Las pruebas Kotlin verifican búsqueda, tildes, ordenación, sorpresa, historial, favoritos, compatibilidad antigua, apertura fallida sin registrar y recuperación de catálogos corruptos/vacíos.
+- Las dos pruebas API 35 verifican reapertura real de DataStore y recorrido de interfaz: búsqueda/categoría, estado de scroll al cambiar de sección, favoritos tras recreación, borrado individual/completo del historial con confirmación, temas y navegador.
+
+Se revisaron visualmente diez capturas reales: catálogo completo en claro, categoría Geografía, búsqueda Waffle, favoritos vacíos/con cuatro juegos, recientes con tres juegos/vacíos, catálogo en oscuro, tablero real de Waffle en Custom Tabs y regreso con la búsqueda Waffle conservada. Se corrigieron desbordamiento de ilustraciones, legibilidad de miniaturas pequeñas y fondos/contraste de las barras del sistema en tema manual. La prueba espera las transiciones iniciales de Chrome y no envía pulsaciones Atrás extra al catálogo.
+
+La URL pública del JSON respondió HTTP 200 y su contenido coincide con el catálogo incluido: 278 entradas, 19 categorías. El funcionamiento sin conexión y con archivos inválidos se verifica mediante selección/validación de caché y catálogo incluido; no se afirma una partida web sin Internet ni una prueba física en modo avión.
 
 Las capturas de favoritos/recientes con varios elementos usan juegos reales del catálogo y datos de prueba locales en el emulador, no actividad del usuario. La prueba de apertura sí pulsa una tarjeta, comprueba el navegador y vuelve con Atrás, verificando que se mantiene la búsqueda.
 
