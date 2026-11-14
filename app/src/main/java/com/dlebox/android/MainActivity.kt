@@ -161,7 +161,7 @@ class MainActivity : ComponentActivity() {
                 Text(status, style = MaterialTheme.typography.bodySmall)
                 Text("DleBox ${BuildConfig.VERSION_NAME} · ${if(BuildConfig.DEBUG) "Compilación de prueba" else "Release"}")
                 Text("Biblioteca independiente. Los juegos pertenecen a sus autores y requieren Internet. Listdle se utiliza como fuente de descubrimiento. No existe afiliación con los juegos ni con Listdle.")
-                Text("Favoritos e historial se guardan en este dispositivo. Sin cuentas, anuncios ni analíticas. El navegador administra sus propias cookies y datos. Android puede incluir los datos locales en la copia de seguridad del dispositivo.", style = MaterialTheme.typography.bodySmall)
+                Text("Favoritos e historial se guardan en este dispositivo. Sin cuentas, anuncios ni analíticas. La copia de seguridad automática de DleBox está desactivada. El navegador administra sus propias cookies y datos.", style = MaterialTheme.typography.bodySmall)
                 TextButton(onClick = { if(!openUrl(BuildConfig.REPOSITORY_URL)) browserError = "No se pudo abrir GitHub. Comprueba tu navegador." }) { Text("Abrir repositorio GitHub") }
             }
         }

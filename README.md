@@ -69,7 +69,7 @@ Firma futura: el workflow manual `APK con firma estable` recibe los secretos `DL
 
 ## Privacidad y límites
 
-Sin cuentas, notificaciones, anuncios propios, compras ni analíticas. Único permiso: Internet. El historial no se transmite por DleBox. Las copias de seguridad del sistema Android pueden incluir los datos locales. Las páginas de juegos mantienen sus propias políticas, cookies y publicidad.
+Sin cuentas, notificaciones, anuncios propios, compras ni analíticas. Único permiso: Internet. El historial no se transmite por DleBox y la copia de seguridad automática está desactivada. Las páginas de juegos mantienen sus propias políticas, cookies y publicidad.
 
 Custom Tabs no permite detectar fallos HTTP internos ni saber si una partida se completó: “Recientes” registra la apertura. Ante un fallo del sitio, vuelve con Atrás y usa Jugar de nuevo o Abrir en navegador desde la ficha. No se modifica contenido de los juegos.
 
