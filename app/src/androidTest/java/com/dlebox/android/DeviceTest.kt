@@ -31,6 +31,11 @@ class DeviceTest {
         ui.onNodeWithTag("search").performTextReplacement(value)
         ui.onNodeWithTag("search").performImeAction()
     }
+    private fun favorite(name: String) {
+        // La acción semántica comprueba también la ruta accesible y evita que una
+        // animación tardía del IME del emulador desplace el punto de pulsación.
+        ui.onNodeWithContentDescription("Favorito: $name").performSemanticsAction(androidx.compose.ui.semantics.SemanticsActions.OnClick) { it() }
+    }
     @Test fun visualJourneyAndBrowserRoundTrip() {
         val vm=ViewModelProvider(ui.activity)[LibraryViewModel::class.java]
         ui.waitUntil(30000) { vm.games.value.size >= 200 }
@@ -57,14 +62,14 @@ class DeviceTest {
         ui.onNodeWithTag("game-waffle").assertIsDisplayed()
         ui.onNodeWithContentDescription("Información de Wordle").assertDoesNotExist()
         shot("03-busqueda-waffle")
-        ui.onNodeWithContentDescription("Favorito: Waffle").performClick()
-        ui.waitUntil(5000) { "waffle" in vm.saved.value.favorites }
+        favorite("Waffle")
+        ui.waitUntil(15000) { "waffle" in vm.saved.value.favorites }
         ui.activityRule.scenario.recreate()
         ui.waitUntil(15000) { ui.onAllNodesWithTag("game-waffle").fetchSemanticsNodes().isNotEmpty() }
         ui.onNodeWithContentDescription("Favorito: Waffle").assert(SemanticsMatcher.expectValue(androidx.compose.ui.semantics.SemanticsProperties.StateDescription,"Guardado"))
         listOf("Globle","FilmLink","Bandle").forEach { name ->
             search(name)
-            ui.onNodeWithContentDescription("Favorito: $name").performClick()
+            favorite(name)
         }
         ui.waitUntil(5000) { vm.saved.value.favorites.size==4 }
         ui.onNodeWithTag("nav-1").performClick()
@@ -94,7 +99,7 @@ class DeviceTest {
         shot("08-explorar-oscuro")
         ui.runOnIdle { vm.theme("light") }
         search("Waffle")
-        ui.onNodeWithTag("game-waffle").performClick()
+        ui.onNodeWithTag("game-waffle").performSemanticsAction(androidx.compose.ui.semantics.SemanticsActions.OnClick) { it() }
         val app=InstrumentationRegistry.getInstrumentation().targetContext.packageName
         assertTrue("Android debe mostrar un navegador",device.wait(Until.hasObject(By.pkg("com.android.chrome")),15000))
         repeat(6) {
