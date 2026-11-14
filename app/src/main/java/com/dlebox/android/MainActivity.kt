@@ -27,6 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -102,7 +103,7 @@ class MainActivity : ComponentActivity() {
                 OutlinedTextField(value = query, onValueChange = { query = it }, placeholder = { Text("Buscar un juego…") }, leadingIcon = { Icon(Icons.Outlined.Search, null) },
                     trailingIcon = { if(query.isNotEmpty()) IconButton(onClick = { query = "" }) { Icon(Icons.Outlined.Close, "Borrar búsqueda") } },
                     singleLine = true, shape = RoundedCornerShape(14.dp), modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp))
-                LazyRow(contentPadding = PaddingValues(horizontal = 20.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                LazyRow(modifier = Modifier.testTag("categories"), contentPadding = PaddingValues(horizontal = 20.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     items(listOf("Todos") + all.values.map { it.category }.distinct().sorted()) { cat ->
                         FilterChip(selected = category == cat, onClick = { category = cat }, label = { Text(cat) })
                     }
