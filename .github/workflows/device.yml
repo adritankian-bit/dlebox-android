@@ -29,14 +29,7 @@ jobs:
           script: |
             chmod +x gradlew
             ./gradlew connectedDebugAndroidTest --no-daemon
-            adb install -r app/build/outputs/apk/debug/app-debug.apk
-            adb shell am force-stop com.dlebox.android
-            adb shell am start -n com.dlebox.android/.MainActivity
-            sleep 4
-            adb exec-out screencap -p > DleBox-Android35.png
-            adb shell cmd uimode night yes
-            sleep 3
-            adb exec-out screencap -p > DleBox-Android35-dark.png
+            bash scripts/device_screenshots.sh
       - uses: actions/upload-artifact@v4
         if: always()
         with:
