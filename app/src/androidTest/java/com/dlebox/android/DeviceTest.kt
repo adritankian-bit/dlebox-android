@@ -99,7 +99,10 @@ class DeviceTest {
         assertTrue("Android debe mostrar un navegador",device.wait(Until.hasObject(By.pkg("com.android.chrome")),15000))
         repeat(6) {
             val consent=device.wait(Until.findObject(By.text(java.util.regex.Pattern.compile("(?i)(Use without an account|Continue without an account|Accept & continue|No thanks|Not now|Got it)"))),4000)
-            if(consent!=null) { consent.click();device.waitForIdle(3000) }
+            if(consent!=null) {
+                try { consent.click();device.waitForIdle(3000) }
+                catch (_: androidx.test.uiautomator.StaleObjectException) { /* Chrome cambió de pantalla; se vuelve a consultar. */ }
+            }
         }
         assertNotEquals(app,device.currentPackageName)
         assertTrue("El navegador debe llegar al destino original",device.wait(Until.hasObject(By.textContains("wafflegame.net")),20000))

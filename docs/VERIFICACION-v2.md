@@ -5,6 +5,7 @@
 - Referencia inicial: 6 juegos, 5 categorías, APK v1.0.0.
 - Fuente adicional: Awesome Daily Minigames, CC0-1.0, revisión y SHA-256 en `catalog/sources/manifest.json`. Instantánea y licencia completas incluidas.
 - 284 candidatos web consultados. 278 incorporados, 19 categorías. 266 respuestas HTTP 2xx; 12 respuestas 403 conservadas con estado `unverified`. Cinco fallos excluidos y un duplicado de FilmLink eliminado conservando el ID original.
+- Recuento desglosado: 261 juegos y 17 colecciones de juegos. Las 17 colecciones se presentan en su categoría y no se suman como juegos individuales en el informe final.
 - `link-checks.json` registra fecha UTC, método, código y destino final o error. No se equipara sintaxis HTTPS válida con disponibilidad comprobada ni HTTP 2xx con una partida terminada.
 - 0 miniaturas de terceros; 278 representaciones originales. Coil mantiene carga de imágenes autorizadas y fallback.
 - Los seis IDs y el nombre/clave de DataStore de v1 se conservan. Esquema JSON 1 con campos opcionales compatibles.

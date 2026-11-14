@@ -1,6 +1,6 @@
 # DleBox v2.0.0 · biblioteca ampliada
 
-Actualización del mismo proyecto Android: de 6 a **278 juegos reales en 19 categorías**.
+Actualización del mismo proyecto Android: de 6 juegos a **278 entradas reales: 261 juegos y 17 colecciones, en 19 categorías**. Las colecciones están identificadas en su categoría.
 
 - Catálogo CC0 reproducible, procedencia por entrada y control de duplicados por destino final.
 - 266 enlaces con respuesta HTTP satisfactoria; 12 pendientes por HTTP 403, identificados en sus fichas. Cinco fallos de conexión/certificado/resolución excluidos; un duplicado eliminado.

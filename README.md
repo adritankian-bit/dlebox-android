@@ -1,6 +1,6 @@
 # DleBox 2.0
 
-Biblioteca Android nativa de juegos diarios de navegador. El proyecto existente se amplía de **6 a 278 juegos reales, en 19 categorías**. Kotlin, Compose, Material 3, DataStore, Coil y Custom Tabs; Android 8.0 o posterior. Sin cuentas, publicidad propia, suscripciones ni analíticas.
+Biblioteca Android nativa de juegos diarios de navegador. El proyecto existente pasa de **6 juegos a 278 entradas: 261 juegos y 17 colecciones, en 19 categorías**. Las colecciones se identifican como tales, no son juegos duplicados. Kotlin, Compose, Material 3, DataStore, Coil y Custom Tabs; Android 8.0 o posterior. Sin cuentas, publicidad propia, suscripciones ni analíticas.
 
 ## Instalar
 
